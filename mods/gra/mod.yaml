@@ -46,10 +46,10 @@ Rules:
 	ra|rules/palettes.yaml
 	ra|rules/world.yaml
 	ra|rules/defaults.yaml
-	ra|rules/vehicles.yaml
+	gra|rules/vehicles.yaml
 	ra|rules/husks.yaml
-	ra|rules/structures.yaml
-	ra|rules/infantry.yaml
+	gra|rules/structures.yaml
+	gra|rules/infantry.yaml
 	ra|rules/civilian.yaml
 	ra|rules/decoration.yaml
 	ra|rules/aircraft.yaml
@@ -129,7 +129,7 @@ Weapons:
 	ra|weapons/ballistics.yaml
 	ra|weapons/missiles.yaml
 	ra|weapons/other.yaml
-	ra|weapons/smallcaliber.yaml
+	gra|weapons/smallcaliber.yaml
 	ra|weapons/superweapons.yaml
 	
 Voices:
