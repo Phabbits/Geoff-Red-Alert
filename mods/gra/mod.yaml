@@ -45,7 +45,7 @@ Rules:
 	ra|rules/player.yaml
 	ra|rules/palettes.yaml
 	ra|rules/world.yaml
-	ra|rules/defaults.yaml
+	gra|rules/defaults.yaml
 	gra|rules/vehicles.yaml
 	ra|rules/husks.yaml
 	gra|rules/structures.yaml
