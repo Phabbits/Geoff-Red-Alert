@@ -52,8 +52,8 @@ Rules:
 	gra|rules/infantry.yaml
 	ra|rules/civilian.yaml
 	ra|rules/decoration.yaml
-	ra|rules/aircraft.yaml
-	ra|rules/ships.yaml
+	gra|rules/aircraft.yaml
+	gra|rules/ships.yaml
 	ra|rules/fakes.yaml
 
 Sequences:
