@@ -179,7 +179,7 @@ WATERBOMBER:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 4
-		Speed: 223
+		Speed: 110
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	AutoTarget:
