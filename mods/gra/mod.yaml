@@ -45,7 +45,7 @@ Rules:
 	ra|rules/player.yaml
 	ra|rules/palettes.yaml
 	ra|rules/world.yaml
-	ra|rules/defaults.yaml
+	gra|rules/defaults.yaml
 	gra|rules/vehicles.yaml
 	ra|rules/husks.yaml
 	gra|rules/structures.yaml
@@ -126,11 +126,11 @@ ChromeLayout:
 
 Weapons:
 	ra|weapons/explosions.yaml
-	ra|weapons/ballistics.yaml
-	ra|weapons/missiles.yaml
+	gra|weapons/ballistics.yaml
+	gra|weapons/missiles.yaml
 	ra|weapons/other.yaml
 	gra|weapons/smallcaliber.yaml
-	ra|weapons/superweapons.yaml
+	gra|weapons/superweapons.yaml
 	
 Voices:
 	ra|audio/voices.yaml
