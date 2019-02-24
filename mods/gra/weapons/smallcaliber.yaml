@@ -247,7 +247,7 @@ Pistol:
 
 Shotgun:
 	Inherits: ^LightMG
-	ReloadDelay: 7
+	ReloadDelay: 70
 	Range: 3c0
 	Report: gun27.aud
 	Warhead@1Dam: SpreadDamage
