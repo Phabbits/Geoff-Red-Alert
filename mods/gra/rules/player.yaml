@@ -112,13 +112,6 @@ Player:
 		Enabled: False
 		DisplayOrder: 9
 		Prerequisites: global-reusable-engineers
-	LobbyPrerequisiteCheckbox@TEAMMELEE:
-		ID: team-melee
-		Label: Team Melee
-		Description: Players can choose to share a base
-		Enabled: False
-		DisplayOrder: 11
-		Prerequisites: global-team-melee
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:
