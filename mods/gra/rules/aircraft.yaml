@@ -206,6 +206,8 @@ WATERBOMBER:
 		Prerequisites: aircraft.upgraded
 	Rearmable:
 		RearmActors: afld, afld.ukraine
+	RenderSprites:
+		Image: mig
 		
 YAK:
 	Inherits: ^Plane

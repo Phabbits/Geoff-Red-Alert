@@ -292,7 +292,7 @@ E6:
 		VoiceSet: EngineerVoice
 	Selectable:
 		Priority: 5
-    Armament@PRIMARY:
+    	Armament@PRIMARY:
 		Weapon: Shotgun
 	Armament@GARRISONED:
 		Name: garrisoned
@@ -300,6 +300,8 @@ E6:
 		MuzzleSequence: garrison-muzzle
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
+	RenderSprites:
+		Image: e1
 
 SPY:
 	Inherits: ^Soldier
