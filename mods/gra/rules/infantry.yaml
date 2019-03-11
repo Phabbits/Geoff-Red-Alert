@@ -292,7 +292,7 @@ E6:
 		VoiceSet: EngineerVoice
 	Selectable:
 		Priority: 5
-    	Armament@PRIMARY:
+	Armament@PRIMARY:
 		Weapon: Shotgun
 	Armament@GARRISONED:
 		Name: garrisoned
