@@ -14,64 +14,64 @@
 		SharesCell: true
 		TerrainSpeeds:
 			Clear: 90
-			Rough: 80
-			Road: 100
-			Bridge: 100
-			Ore: 80
-			Gems: 80
-			Beach: 80
+			Rough: 40
+			Road: 200
+			Bridge: 200
+			Ore: 40
+			Gems: 40
+			Beach: 20
 	Locomotor@WHEELED:
 		Name: wheeled
 		Crushes: mine, crate
 		TerrainSpeeds:
 			Clear: 80
-			Rough: 40
-			Road: 100
-			Bridge: 100
-			Ore: 70
-			Gems: 70
-			Beach: 40
+			Rough: 20
+			Road: 200
+			Bridge: 200
+			Ore: 10
+			Gems: 10
+			Beach: 5
 	Locomotor@HEAVYWHEELED:
 		Name: heavywheeled
 		Crushes: wall, mine, crate, infantry
 		TerrainSpeeds:
 			Clear: 80
-			Rough: 40
-			Road: 100
-			Bridge: 100
-			Ore: 70
-			Gems: 70
-			Beach: 40
+			Rough: 20
+			Road: 200
+			Bridge: 200
+			Ore: 5
+			Gems: 5
+			Beach: 5
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
 		Crushes: wall, mine, crate
 		TerrainSpeeds:
-			Clear: 80
-			Rough: 70
-			Road: 100
-			Bridge: 100
-			Ore: 70
-			Gems: 70
-			Beach: 70
+			Clear: 60
+			Rough: 50
+			Road: 200
+			Bridge: 200
+			Ore: 30
+			Gems: 30
+			Beach: 30
 	Locomotor@TRACKED:
 		Name: tracked
 		Crushes: wall, infantry, mine, crate
 		TerrainSpeeds:
-			Clear: 80
-			Rough: 70
-			Road: 100
-			Bridge: 100
-			Ore: 70
-			Gems: 70
-			Beach: 70
+			Clear: 60
+			Rough: 60
+			Road: 200
+			Bridge: 200
+			Ore: 60
+			Gems: 60
+			Beach: 60
 	Locomotor@HEAVYTRACKED:
 		Name: heavytracked
 		Crushes: wall, infantry, mine, crate, heavywall
 		TerrainSpeeds:
 			Clear: 80
-			Rough: 70
-			Road: 100
-			Bridge: 100
+			Rough: 80
+			Road: 200
+			Bridge: 200
 			Ore: 70
 			Gems: 70
 			Beach: 70
