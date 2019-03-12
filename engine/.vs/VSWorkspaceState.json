@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\OpenRA.Game",
+    "\\OpenRA.Game\\GameRules",
+    "\\OpenRA.Game\\Graphics",
+    "\\OpenRA.Game\\Map",
+    "\\OpenRA.Game\\Orders",
+    "\\OpenRA.Mods.Cnc\\Traits\\SupportPowers",
+    "\\OpenRA.Mods.Common",
+    "\\OpenRA.Mods.Common\\Orders",
+    "\\OpenRA.Mods.Common\\Traits",
+    "\\OpenRA.Mods.Common\\Traits\\World",
+    "\\OpenRA.Test\\OpenRA.Game"
+  ],
+  "PreviewInSolutionExplorer": false
+}

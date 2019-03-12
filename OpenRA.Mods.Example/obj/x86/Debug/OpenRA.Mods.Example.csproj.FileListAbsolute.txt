@@ -1,0 +1,5 @@
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\OpenRA.Mods.Example\bin\Debug\OpenRA.Mods.Example.dll
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\OpenRA.Mods.Example\bin\Debug\OpenRA.Mods.Example.pdb
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\OpenRA.Mods.Example\obj\x86\Debug\OpenRA.Mods.Example.csprojResolveAssemblyReference.cache
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\OpenRA.Mods.Example\obj\x86\Debug\OpenRA.Mods.Example.dll
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\OpenRA.Mods.Example\obj\x86\Debug\OpenRA.Mods.Example.pdb

@@ -1,0 +1,5 @@
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Mods.Cnc\bin\Debug\OpenRA.Mods.Cnc.dll
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Mods.Cnc\bin\Debug\OpenRA.Mods.Cnc.pdb
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Mods.Cnc\obj\x86\Debug\OpenRA.Mods.Cnc.csprojResolveAssemblyReference.cache
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Mods.Cnc\obj\x86\Debug\OpenRA.Mods.Cnc.dll
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Mods.Cnc\obj\x86\Debug\OpenRA.Mods.Cnc.pdb

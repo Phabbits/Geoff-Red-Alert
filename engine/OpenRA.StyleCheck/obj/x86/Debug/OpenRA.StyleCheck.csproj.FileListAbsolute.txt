@@ -1,0 +1,5 @@
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.StyleCheck\obj\x86\Debug\OpenRA.StyleCheck.csprojResolveAssemblyReference.cache
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.StyleCheck\obj\x86\Debug\OpenRA.StyleCheck.exe
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.StyleCheck\obj\x86\Debug\OpenRA.StyleCheck.pdb
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.StyleCheck.exe
+C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.StyleCheck.pdb
