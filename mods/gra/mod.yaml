@@ -1,6 +1,6 @@
 Metadata:
 	Title: Geoff Red Alert
-	Version: playtest-20190106
+	Version: 1
 	Website: https://www.openra.net
 	WebIcon32: https://www.openra.net/images/icons/ra_32x32.png
 
@@ -37,7 +37,7 @@ Packages:
 
 MapFolders:
 	ra|maps: System
-	~^maps/ra/playtest-20190106: User
+	~^maps/ra/1: User
 
 Rules:
 	ra|rules/misc.yaml
