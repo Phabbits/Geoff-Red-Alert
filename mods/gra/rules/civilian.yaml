@@ -145,8 +145,48 @@ HOSP:
 	GpsDot:
 		String: Hospital
 
+^CIVGARR
+    Inherits: ^CivBuilding
+    CaptureManager:
+	Capturable:
+		Types: building
+	CapturableProgressBar:
+	CapturableProgressBlink:
+    Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		PipCount: 4
+    AttackGarrisoned:
+		RequiresCondition: !build-incomplete
+		Armaments: garrisoned
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 88, 88, 88, 88, 88, 88
+	RenderRangeCircle:
+		FallbackRange: 6c0
+
+^DesertCIVGARR
+    Inherits: ^DesertCivBuilding
+    CaptureManager:
+	Capturable:
+		Types: building
+	CapturableProgressBar:
+	CapturableProgressBlink:
+    Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		PipCount: 4
+    AttackGarrisoned:
+		RequiresCondition: !build-incomplete
+		Armaments: garrisoned
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 88, 88, 88, 88, 88, 88
+	RenderRangeCircle:
+		FallbackRange: 6c0
+
 V01:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -164,7 +204,7 @@ V01:
 			BottomRight: 896, 683
 
 V02:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -178,7 +218,7 @@ V02:
 			BottomRight: 1024, 597
 
 V03:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -192,7 +232,7 @@ V03:
 			BottomRight: 1024, 597
 
 V04:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -206,7 +246,7 @@ V04:
 			BottomRight: 683, 683
 
 V05:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	Inherits@shape: ^2x1Shape
 	Building:
 		Footprint: xx
@@ -215,7 +255,7 @@ V05:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V06:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	Inherits@shape: ^2x1Shape
 	Building:
 		Footprint: xx
@@ -224,7 +264,7 @@ V06:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V07:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	Inherits@shape: ^2x1Shape
 	Building:
 		Footprint: xx
@@ -233,32 +273,32 @@ V07:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V08:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V09:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V10:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V11:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V12:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V13:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
@@ -288,7 +328,7 @@ V18:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V19:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	RenderSprites:
 		Palette: player
 	Tooltip:
@@ -302,7 +342,7 @@ V19:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, NoAutoTarget
 
 V19.Husk:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	RenderSprites:
 		Palette: player
 	Tooltip:
@@ -695,7 +735,7 @@ BRIDGEHUT.small:
 		TargetTypes: BridgeHut, C4
 
 V20:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -707,7 +747,7 @@ V20:
 			BottomRight: 1024, 896
 
 V21:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -724,17 +764,17 @@ V21:
 			BottomRight: 1024, 598
 
 V22:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Inherits@shape: ^2x1Shape
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
 
 V23:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 
 V24:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -746,7 +786,7 @@ V24:
 			BottomRight: 640, 853
 
 V25:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -762,60 +802,60 @@ V25:
 			BottomRight: 1024, 512
 
 V26:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Inherits@shape: ^2x1Shape
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
 
 V27:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 
 V28:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 
 V29:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 
 V30:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Inherits@shape: ^2x1Shape
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
 
 V31:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Inherits@shape: ^2x1Shape
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
 
 V32:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Inherits@shape: ^2x1Shape
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
 
 V33:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Inherits@shape: ^2x1Shape
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
 
 V34:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 
 V35:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 
 V36:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 
 V37:
-	Inherits: ^DesertCivBuilding
+	Inherits: ^DesertCIVGARR
 	Building:
 		Footprint: __xx_ ___xx
 		Dimensions: 5,2
@@ -832,7 +872,7 @@ RICE:
 		RequireTilesets: TEMPERAT
 
 RUSHOUSE:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		RequireTilesets: TEMPERAT
 	Building:
@@ -842,12 +882,12 @@ RUSHOUSE:
 		UseTargetableCellsOffsets: false
 
 ASIANHUT:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		RequireTilesets: TEMPERAT
 
 SNOWHUT:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		RequireTilesets: SNOW
 	Building:
@@ -859,7 +899,7 @@ SNOWHUT:
 		UseTargetableCellsOffsets: false
 
 LHUS:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		RequireTilesets: TEMPERAT
 	Selectable:
@@ -871,7 +911,7 @@ LHUS:
 		Dimensions: 1,1
 
 WINDMILL:
-	Inherits: ^CivBuilding
+	Inherits: ^CIVGARR
 	MapEditorData:
 		RequireTilesets: TEMPERAT
 	Selectable:

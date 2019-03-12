@@ -408,6 +408,7 @@ E3:
 	Armament@GARRISONED:
 		Name: garrisoned
 		Weapon: Dragon
+        MuzzleSequence: garrison-muzzle
 	TakeCover:
 		ProneOffset: 384,0,-395
 	AttackFrontal:
@@ -872,6 +873,7 @@ SHOK:
 	Armament@GARRISONED:
 		Name: garrisoned
 		Weapon: PortaTesla
+        MuzzleSequence: garrison-muzzle
 	TakeCover:
 		ProneOffset: 227,0,-245
 	AttackFrontal:
