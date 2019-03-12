@@ -249,6 +249,10 @@ e6:
 		Length: 6
 		Facings: 8
 		Tick: 100
+    shoot:
+		Start: 250
+		Length: 6
+		Facings: 8
 	parachute:
 		Start: 210
 	idle1:
@@ -963,6 +967,8 @@ shok:
 c1:
 	stand:
 		Facings: 8
+    stand2:
+		Facings: 8
 	panic-stand:
 		Start: 8
 		Stride: 6
@@ -974,6 +980,16 @@ c1:
 	shoot:
 		Start: 120
 		Length: 4
+		Facings: 8
+    parachute:
+		Facings: 8
+    prone-shoot:
+		Facings: 8
+    prone-run:
+		Facings: 8
+    idle1:
+		Facings: 8
+    idle2:
 		Facings: 8
 	die1:
 		Start: 152

@@ -188,9 +188,8 @@ SCUDAtomic:
 	ReloadDelay: 720
 	Range: 15c0
 	MinRange: 10c0
-    RenderSprites:
-        Image: Atomic
     Projectile: Bullet
+        Image: ATOMIC
         Speed: 50
         Blockable: false
         TrailImage: smokey

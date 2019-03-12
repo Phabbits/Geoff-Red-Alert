@@ -441,6 +441,7 @@ FIREBOMBER:
 	Armament:
 		Weapon: FireballLauncher
 		LocalOffset: 512,0,0
+        PauseOnCondition: !ammo
 	AttackAircraft:
 		FacingTolerance: 20
 	Aircraft:
