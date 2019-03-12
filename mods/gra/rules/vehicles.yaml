@@ -5,7 +5,7 @@ V2RL:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 80
-		Prerequisites: dome, ~vehicles.soviet, ~techlevel.medium
+		Prerequisites: dome, ~vehicles.soviet, ~techlevel.medium, ~!vehicles.proles
 		Description: Long-range rocket artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
 	Valued:
 		Cost: 900
@@ -46,6 +46,56 @@ V2RL:
 	Selectable:
 		DecorationBounds: 28,28
 
+LRNUKEL:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 90
+		Prerequisites: dome, stek, ~vehicles.soviet, ~techlevel.high, ~!vehicles.proles
+		Description: Long-range nuclear missle launcher.
+	Valued:
+		Cost: 9000
+	Tooltip:
+		Name: Long Range NUKE Launcher
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 40000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Armament:
+		Weapon: SCUDAtomic
+		ReloadingCondition: reloading
+	AutoTarget:
+		ScanRadius: 10
+	AttackFrontal:
+		TargetFrozenActors: True
+	WithFacingSpriteBody:
+		RequiresCondition: !reloading
+		Name: loaded
+	WithFacingSpriteBody@EMPTY:
+		RequiresCondition: reloading
+		Sequence: empty-idle
+		Name: reloading
+	SelectionDecorations:
+	Explodes:
+		Weapon: V2Explode
+    RenderSprites:
+        Image: v2rl
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+	Selectable:
+		DecorationBounds: 28,28
+        
 1TNK:
 	Inherits: ^TrackedVehicle
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -142,7 +192,7 @@ V2RL:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 120
-		Prerequisites: fix, ~vehicles.soviet, ~techlevel.medium
+		Prerequisites: fix, ~vehicles.soviet, ~techlevel.medium, ~!vehicles.proles
 		Description: Soviet Main Battle Tank, with dual cannons\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 1150
@@ -188,7 +238,7 @@ V2RL:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 180
-		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high
+		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high, ~!vehicles.proles
 		BuildDurationModifier: 50
 		Description: Big and slow tank, with anti-air capability.\nCan crush concrete walls.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry, Aircraft\n  Weak vs Nothing
 	Valued:
@@ -243,6 +293,65 @@ V2RL:
 	Selectable:
 		DecorationBounds: 44,38,0,-4
 
+MM2K:
+	Inherits: ^TrackedVehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 180
+		Prerequisites: fix, stek, ~techlevel.high, ~vehicles.proles
+		BuildDurationModifier: 50
+		Description: Tiberian Sunnnnnnnn!
+	Valued:
+		Cost: 8000
+	Tooltip:
+		Name: Mammoth MK2
+		GenericName: Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 200000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 50
+		Locomotor: heavytracked
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 2
+	Armament@PRIMARY:
+		Weapon: MK2Weapon
+		LocalOffset: 900,180,340, 900,-180,340
+	Armament@SECONDARY:
+		Weapon: FLAK-23-AG
+		Recoil: 85
+		LocalOffset: 512,0,192
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	SpawnActorOnDeath:
+		Actor: 4TNK.Husk
+	SelfHealing:
+		Step: 100
+		Delay: 3
+		HealIfBelow: 50
+		DamageCooldown: 150
+	SelectionDecorations:
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+	DetectCloaked:
+		Range: 6c0
+	Selectable:
+		DecorationBounds: 44,38,0,-4
+    RenderSprites:
+        Image: 4TNK
+        
 ARTY:
 	Inherits: ^TrackedVehicle
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -433,7 +542,7 @@ APC:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 40
-		Prerequisites: ~vehicles.soviet, ~techlevel.low
+		Prerequisites: ~vehicles.soviet, ~techlevel.low, ~!vehicles.proles
 		Description: Tough infantry transport.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 850
@@ -466,6 +575,48 @@ APC:
 		LoadingCondition: notmobile
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
+
+ARMOR:
+	Inherits: ^TrackedVehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 40
+		Prerequisites: ~vehicles.proles, ~techlevel.low
+		Description: An unbreakable box.
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Armored Truck
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 180000
+	Armor:
+		Type: Heavy
+    Armament:
+		Weapon: Pistol
+		LocalOffset: 85,0,171
+	Mobile:
+		Speed: 142
+		RequiresCondition: !notmobile && !being-captured
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	AttackFrontal:
+	WithMuzzleOverlay:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		LoadingCondition: notmobile
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+    RenderSprites:
+        Image: APC
 
 MNLY:
 	Inherits: ^TrackedVehicle
@@ -659,7 +810,7 @@ FTRK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 60
-		Prerequisites: ~vehicles.soviet, ~techlevel.low
+		Prerequisites: ~vehicles.soviet, ~techlevel.low, ~!vehicles.proles
 		Description: Mobile unit with mounted Flak cannon.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Tanks
 	Valued:
 		Cost: 600
@@ -784,7 +935,7 @@ QTNK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 190
-		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high
+		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high, ~!vehicles.proles
 		Description: Deals seismic damage to nearby vehicles\nand structures.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 2000
@@ -874,3 +1025,56 @@ STNK:
 	-MustBeDestroyed:
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
+
+HEAL:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 130
+		Prerequisites: ~vehicles.proles, ~techlevel.low
+		BuildDurationModifier: 50
+		Description: Band-Aid Dispenser Extrodinaire
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Ambulance
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 25000
+	Armor:
+		Type: Medium
+	Mobile:
+		Speed: 142
+		Locomotor: heavywheeled
+		RequiresCondition: !notmobile && !being-captured
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	Armament:
+		Weapon: Heal
+		Cursor: heal
+		OutsideRangeCursor: heal
+		TargetStances: Ally
+		ForceTargetStances: None
+	Turreted:
+		TurnSpeed: 5
+    Cargo:
+		Types: Infantry
+		MaxWeight: 2
+		PipCount: 2
+		LoadingCondition: notmobile
+	AttackTurreted:
+	WithSpriteTurret:
+	-MustBeDestroyed:
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+    RenderSprites:
+        Image: STNK

@@ -1009,6 +1009,7 @@ c1:
 		Length: 6
 		Facings: 8
 		Tick: 80
+    icon: e1
 
 c2:
 	stand:

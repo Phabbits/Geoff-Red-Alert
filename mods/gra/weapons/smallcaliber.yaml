@@ -203,7 +203,7 @@ Vulcan:
 		ValidTargets: Water, Underwater
 		InvalidTargets: Ship, Structure, Bridge
 		Delay: 10
-
+        
 ChainGun:
 	Inherits: ^HeavyMG
 	ReloadDelay: 10
@@ -247,7 +247,7 @@ Pistol:
 
 Shotgun:
 	Inherits: ^LightMG
-	ReloadDelay: 70
+	ReloadDelay: 7
 	Range: 3c0
 	Report: gun27.aud
 	Warhead@1Dam: SpreadDamage
