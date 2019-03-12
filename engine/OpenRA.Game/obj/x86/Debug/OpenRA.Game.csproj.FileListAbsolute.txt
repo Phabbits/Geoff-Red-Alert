@@ -1,5 +1,0 @@
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Game\obj\x86\Debug\OpenRA.Game.csprojResolveAssemblyReference.cache
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Game\obj\x86\Debug\OpenRA.Game.exe
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Game\obj\x86\Debug\OpenRA.Game.pdb
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Game.exe
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Game.pdb

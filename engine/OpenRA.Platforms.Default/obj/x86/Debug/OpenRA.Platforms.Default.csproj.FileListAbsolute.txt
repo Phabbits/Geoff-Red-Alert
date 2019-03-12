@@ -1,5 +1,0 @@
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Platforms.Default\obj\x86\Debug\OpenRA.Platforms.Default.csprojResolveAssemblyReference.cache
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Platforms.Default\obj\x86\Debug\OpenRA.Platforms.Default.dll
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Platforms.Default\obj\x86\Debug\OpenRA.Platforms.Default.pdb
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Platforms.Default.dll
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Platforms.Default.pdb

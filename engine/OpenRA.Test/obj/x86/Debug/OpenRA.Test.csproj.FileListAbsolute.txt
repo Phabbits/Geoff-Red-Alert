@@ -1,6 +1,0 @@
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Test\obj\x86\Debug\OpenRA.Test.csprojResolveAssemblyReference.cache
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Test.dll.config
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Test\obj\x86\Debug\OpenRA.Test.dll
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Test\obj\x86\Debug\OpenRA.Test.pdb
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Test.dll
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Test.pdb

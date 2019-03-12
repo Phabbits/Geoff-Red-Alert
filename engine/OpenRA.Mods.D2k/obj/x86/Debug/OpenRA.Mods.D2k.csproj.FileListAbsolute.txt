@@ -1,4 +1,0 @@
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Mods.D2k\bin\Debug\OpenRA.Mods.D2k.dll
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Mods.D2k\bin\Debug\OpenRA.Mods.D2k.pdb
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Mods.D2k\obj\x86\Debug\OpenRA.Mods.D2k.dll
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Mods.D2k\obj\x86\Debug\OpenRA.Mods.D2k.pdb

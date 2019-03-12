@@ -1,4 +1,0 @@
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Server\obj\x86\Debug\OpenRA.Server.exe
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Server\obj\x86\Debug\OpenRA.Server.pdb
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Server.exe
-C:\Users\GabrielJosephFrey\Documents\GitHub\Geoff-Red-Alert\engine\OpenRA.Server.pdb
