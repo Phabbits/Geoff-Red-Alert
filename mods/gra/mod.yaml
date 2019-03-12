@@ -37,20 +37,20 @@ Packages:
 
 MapFolders:
 	ra|maps: System
-	~^maps/ra/playtest-20190106: User
+	~^maps/ra/1: User
 
 Rules:
 	ra|rules/misc.yaml
 	ra|rules/ai.yaml
-	gra|rules/player.yaml
+	ra|rules/player.yaml
 	ra|rules/palettes.yaml
-	ra|rules/world.yaml
+	gra|rules/world.yaml
 	gra|rules/defaults.yaml
 	gra|rules/vehicles.yaml
 	ra|rules/husks.yaml
 	gra|rules/structures.yaml
 	gra|rules/infantry.yaml
-	ra|rules/civilian.yaml
+	gra|rules/civilian.yaml
 	ra|rules/decoration.yaml
 	gra|rules/aircraft.yaml
 	gra|rules/ships.yaml
@@ -59,9 +59,9 @@ Rules:
 Sequences:
 	ra|sequences/ships.yaml
 	ra|sequences/vehicles.yaml
-	ra|sequences/structures.yaml
-	ra|sequences/infantry.yaml
-	ra|sequences/aircraft.yaml
+	gra|sequences/structures.yaml
+	gra|sequences/infantry.yaml
+	gra|sequences/aircraft.yaml
 	ra|sequences/misc.yaml
 	ra|sequences/decorations.yaml
 
@@ -75,7 +75,7 @@ Cursors:
 	ra|cursors.yaml
 
 Chrome:
-	ra|chrome.yaml
+	gra|chrome.yaml
 
 Assemblies:
 	common|OpenRA.Mods.Common.dll
@@ -125,15 +125,15 @@ ChromeLayout:
 	common|chrome/playerprofile.yaml
 
 Weapons:
-	ra|weapons/explosions.yaml
+	gra|weapons/explosions.yaml
 	gra|weapons/ballistics.yaml
 	gra|weapons/missiles.yaml
-	ra|weapons/other.yaml
+	gra|weapons/other.yaml
 	gra|weapons/smallcaliber.yaml
 	gra|weapons/superweapons.yaml
 	
 Voices:
-	ra|audio/voices.yaml
+	gra|audio/voices.yaml
 
 Notifications:
 	ra|audio/notifications.yaml
@@ -164,7 +164,7 @@ ServerTraits:
 
 ChromeMetrics:
 	common|metrics.yaml
-	ra|metrics.yaml
+	gra|metrics.yaml
 
 Fonts:
 	Tiny:

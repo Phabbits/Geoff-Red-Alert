@@ -5,7 +5,7 @@ SS:
 		Queue: Ship
 		BuildAtProductionType: Submarine
 		BuildPaletteOrder: 30
-		Prerequisites: ~spen, ~techlevel.low
+		Prerequisites: ~spen, ~techlevel.low, ~!ships.proles
 		Description: Submerged anti-ship unit\narmed with torpedoes.\nCan detect other submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft\n  Special Ability: Submerge
 	Valued:
 		Cost: 950
@@ -74,7 +74,7 @@ MSUB:
 		Queue: Ship
 		BuildAtProductionType: Submarine
 		BuildPaletteOrder: 60
-		Prerequisites: ~spen, stek, ~techlevel.high
+		Prerequisites: ~spen, stek, ~techlevel.high, ~!ships.proles
 		BuildDurationModifier: 50
 		Description: Submerged anti-ground siege unit\nwith anti-air capabilities.\nCan detect other submarines.\n  Strong vs Buildings, Ground units, Aircraft\n  Weak vs Naval units\n  Special Ability: Submerge
 	Valued:
@@ -190,6 +190,73 @@ DD:
 	Selectable:
 		DecorationBounds: 38,38
 
+PSUB:
+    Inherits: ^Ship
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Submarine
+		BuildPaletteOrder: 60
+		Prerequisites: ~spen, stek, ~techlevel.high, ~ships.proles
+		BuildDurationModifier: 50
+		Description: Some proles just want to\nwatch the world burn.
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Napalm Submarine
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 3
+		Speed: 42
+	RevealsShroud:
+		Range: 8c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	Targetable:
+		TargetTypes: Ground, Water, Ship, Submarine, Repair
+		RequiresCondition: !underwater
+	Targetable@UNDERWATER:
+		TargetTypes: Underwater, Submarine
+		RequiresCondition: underwater
+	Cloak:
+		CloakTypes: Underwater
+		InitialDelay: 0
+		CloakDelay: 100
+		CloakSound: subshow1.aud
+		UncloakSound: subshow1.aud
+		CloakedCondition: underwater
+		Palette: submerged
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Armament@PRIMARY:
+		Weapon: PSUBNapalm
+		LocalOffset: 0,-171,0, 0,171,0
+	AttackFrontal:
+		TargetFrozenActors: True
+	SelectionDecorations:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 4c0
+	RenderDetectionCircle:
+	Explodes:
+		Weapon: UnitExplodeSubmarine
+		EmptyWeapon: UnitExplodeSubmarine
+	-MustBeDestroyed:
+	Selectable:
+		DecorationBounds: 44,44
+    RenderSprites:
+        Image: MSUB
 CA:
 	Inherits: ^Ship
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove

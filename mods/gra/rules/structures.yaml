@@ -213,7 +213,7 @@ SPEN:
 		Range: 10c0
 	RenderDetectionCircle:
 	ProvidesPrerequisite@soviet:
-		Factions: soviet, russia, ukraine
+		Factions: soviet, russia, ukraine, proles
 		Prerequisite: ships.soviet
 	ProvidesPrerequisite@sovietvanilla:
 		Factions: soviet
@@ -236,6 +236,9 @@ SPEN:
 	ProvidesPrerequisite@ukrainianstructure:
 		RequiresPrerequisites: structures.ukraine
 		Prerequisite: ships.ukraine
+    ProvidesPrerequisite@prolesstructure:
+		RequiresPrerequisites: structures.proles
+		Prerequisite: ships.proles
 	ProvidesPrerequisite@buildingname:
 	MapEditorData:
 		ExcludeTilesets: INTERIOR
@@ -1015,7 +1018,7 @@ WEAP:
 		Factions: germany
 		Prerequisite: vehicles.germany
 	ProvidesPrerequisite@soviet:
-		Factions: soviet, russia, ukraine
+		Factions: soviet, russia, ukraine, proles
 		Prerequisite: vehicles.soviet
 	ProvidesPrerequisite@sovietvanilla:
 		Factions: soviet
@@ -1053,6 +1056,9 @@ WEAP:
 	ProvidesPrerequisite@ukrainianstructure:
 		RequiresPrerequisites: structures.ukraine
 		Prerequisite: vehicles.ukraine
+    ProvidesPrerequisite@prolesstructure:
+		RequiresPrerequisites: structures.proles
+		Prerequisite: vehicles.proles
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
@@ -1103,7 +1109,7 @@ FACT:
 		Factions: germany
 		Prerequisite: structures.germany
 	ProvidesPrerequisite@soviet:
-		Factions: soviet, russia, ukraine
+		Factions: soviet, russia, ukraine, proles
 		Prerequisite: structures.soviet
 	ProvidesPrerequisite@sovietvanilla:
 		Factions: soviet
@@ -1114,6 +1120,9 @@ FACT:
 	ProvidesPrerequisite@ukraine:
 		Factions: ukraine
 		Prerequisite: structures.ukraine
+    ProvidesPrerequisite@proles:
+		Factions: proles
+		Prerequisite: structures.proles
 	Health:
 		HP: 150000
 	Armor:
@@ -1380,6 +1389,99 @@ HPAD:
 		ZOffset: 256
 		RequiresCondition: primary
 
+PHPAD:
+	Inherits: ^Building
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 48,48
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 768,-512,0, 768,512,0, -281,-512,0, -630,512,0
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 120
+		Prerequisites: dome, ~structures.proles, ~techlevel.medium
+		Description: Produces and reloads\nhelicopters.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Helipad
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 80000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	WithResupplyAnimation:
+		RequiresCondition: !build-incomplete
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: 0,-256,0
+		ExitCell: 0,0
+		MoveIntoWorld: false
+		Facing: 224
+	RallyPoint:
+	Production:
+		Produces: Aircraft, Helicopter
+	Reservable:
+	ProductionBar:
+		ProductionType: Aircraft
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Power:
+		Amount: -10
+    ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine, proles
+		Prerequisite: aircraft.soviet
+	ProvidesPrerequisite@sovietvanilla:
+		Factions: soviet
+		Prerequisite: aircraft.sovietvanilla
+	ProvidesPrerequisite@russia:
+		Factions: russia
+		Prerequisite: aircraft.russia
+	ProvidesPrerequisite@ukraine:
+		Factions: ukraine
+		Prerequisite: aircraft.ukraine
+	ProvidesPrerequisite@sovietstructure:
+		RequiresPrerequisites: structures.soviet
+		Prerequisite: aircraft.soviet
+	ProvidesPrerequisite@sovietvanillastructure:
+		RequiresPrerequisites: structures.sovietvanilla
+		Prerequisite: aircraft.sovietvanilla
+	ProvidesPrerequisite@russianstructure:
+		RequiresPrerequisites: structures.russia
+		Prerequisite: aircraft.russia
+	ProvidesPrerequisite@ukrainianstructure:
+		RequiresPrerequisites: structures.ukraine
+		Prerequisite: aircraft.ukraine
+    ProvidesPrerequisite@prolesstructure:
+		RequiresPrerequisites: structures.proles
+		Prerequisite: aircraft.proles
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	InfiltrateForSupportPower:
+		Proxy: aircraft.upgraded
+		Types: SpyInfiltrate
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+    RenderSprites:
+        Image: HPAD
+        
 AFLD:
 	Inherits: ^Building
 	Inherits@shape: ^3x2Shape
@@ -1420,7 +1522,7 @@ AFLD:
 		Produces: Aircraft, Plane
 	Reservable:
 	ProvidesPrerequisite@soviet:
-		Factions: soviet, russia, ukraine
+		Factions: soviet, russia, ukraine, proles
 		Prerequisite: aircraft.soviet
 	ProvidesPrerequisite@sovietvanilla:
 		Factions: soviet
@@ -1443,6 +1545,9 @@ AFLD:
 	ProvidesPrerequisite@ukrainianstructure:
 		RequiresPrerequisites: structures.ukraine
 		Prerequisite: aircraft.ukraine
+    ProvidesPrerequisite@prolesstructure:
+		RequiresPrerequisites: structures.proles
+		Prerequisite: aircraft.proles
 	AirstrikePower@spyplane:
 		OrderName: SovietSpyPlane
 		Prerequisites: aircraft.soviet
@@ -1580,7 +1685,7 @@ APWR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
-		Prerequisites: dome, ~techlevel.medium
+		Prerequisites: dome, ~techlevel.medium, ~!structures.proles
 		Description: Provides double the power of\na standard Power Plant.
 	Valued:
 		Cost: 500
@@ -1611,6 +1716,53 @@ APWR:
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
+
+NPWR:
+	Inherits: ^Building
+	Inherits@POWER_OUTAGE: ^DisabledByPowerOutage
+	Inherits@shape: ^3x2Shape
+	HitShape:
+		TargetableOffsets: -355,-1024,0
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 110
+		Prerequisites: dome, ~techlevel.medium, ~structures.proles
+		Description: Provides double the power of\na standard Power Plant.
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Nuclear Power Plant
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xxx Xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 72,48
+		DecorationBounds: 72,68,0,-10
+	SelectionDecorations:
+	Health:
+		HP: 120000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Power:
+		Amount: 1500
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+    Explodes:
+		Weapon: MiniNuke
+		EmptyWeapon: MiniNuke
+		DamageSource: Killer
+    RenderSprites:
+        Image: BIO
 
 STEK:
 	Inherits: ^ScienceBuilding
@@ -1702,7 +1854,7 @@ BARR:
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	ProvidesPrerequisite@soviet:
-		Factions: soviet, russia, ukraine
+		Factions: soviet, russia, ukraine, proles
 		Prerequisite: infantry.soviet
 	ProvidesPrerequisite@sovietvanilla:
 		Factions: soviet
@@ -1725,6 +1877,9 @@ BARR:
 	ProvidesPrerequisite@ukrainianstructure:
 		RequiresPrerequisites: structures.ukraine
 		Prerequisite: infantry.ukraine
+    ProvidesPrerequisite@prolesstructure:
+		RequiresPrerequisites: structures.proles
+		Prerequisite: infantry.proles
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:

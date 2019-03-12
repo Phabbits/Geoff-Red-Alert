@@ -86,7 +86,7 @@ MIG:
 		Queue: Aircraft
 		BuildAtProductionType: Plane
 		BuildPaletteOrder: 50
-		Prerequisites: ~afld, stek, ~techlevel.high
+		Prerequisites: ~afld, stek, ~techlevel.high, ~!aircraft.proles
 		BuildDurationModifier: 50
 		Description: Fast Ground-Attack Plane.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
@@ -143,13 +143,14 @@ MIG:
 	Rearmable:
 		RearmActors: afld, afld.ukraine
 
+
 WATERBOMBER:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Aircraft
 		BuildAtProductionType: Plane
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 90
 		Prerequisites: ~afld, stek, ~techlevel.high
 		BuildDurationModifier: 50
 		Description: Slow, powerful, anti-navy bomber. 
@@ -176,7 +177,7 @@ WATERBOMBER:
 	AttackAircraft:
 		FacingTolerance: 20
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 3000
 		InitialFacing: 192
 		TurnSpeed: 4
 		Speed: 110
@@ -186,7 +187,7 @@ WATERBOMBER:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
 	AmmoPool:
-		Ammo: 8
+		Ammo: 12
 		AmmoCondition: ammo
 	ReturnOnIdle:
 	Selectable:
@@ -198,17 +199,19 @@ WATERBOMBER:
 	Contrail@2:
 		Offset: -598,683,0
 	SpawnActorOnDeath:
-		Actor: MIG.Husk
+		Actor: BADR.Husk
 	SmokeTrailWhenDamaged:
 		Offset: -853,0,171
 		Interval: 2
+    RenderSprites:
+        Image: badr
 	ProducibleWithLevel:
 		Prerequisites: aircraft.upgraded
 	Rearmable:
 		RearmActors: afld, afld.ukraine
-	RenderSprites:
-		Image: mig
-		
+
+
+        
 YAK:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -216,7 +219,7 @@ YAK:
 		Queue: Aircraft
 		BuildAtProductionType: Plane
 		BuildPaletteOrder: 30
-		Prerequisites: ~afld, ~techlevel.medium
+		Prerequisites: ~afld, ~techlevel.medium, ~!aircraft.proles
 		Description: Attack Plane armed with\ndual machine guns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 1350
@@ -332,6 +335,148 @@ TRAN:
 	Selectable:
 		DecorationBounds: 40,36
 
+BLHK:
+	Inherits: ^Helicopter
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 10
+		Prerequisites: ~phpad, ~techlevel.medium, ~aircraft.proles
+		Description: The Corps ain't paying us by the hour!
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: BlackHawk
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 21000
+	RevealsShroud:
+		Range: 12c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 10c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: HellfireAA
+		LocalOffset: 0,-213,-85, 0,213,-85
+		PauseOnCondition: !ammo
+	Armament@SECONDARY:
+		Weapon: HellfireAG
+		LocalOffset: 0,213,-85, 0,-213,-85
+		PauseOnCondition: !ammo
+	AttackAircraft:
+		FacingTolerance: 20
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 128
+		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach,Gems
+		AltitudeVelocity: 0c58
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	WithIdleOverlay@ROTOR1AIR:
+		Offset: 597,0,213
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTOR1GROUND:
+		Offset: 597,0,213
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	WithIdleOverlay@ROTOR2AIR:
+		Offset: -597,0,341
+		Sequence: rotor2
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTOR2GROUND:
+		Offset: -597,0,341
+		Sequence: slow-rotor2
+		RequiresCondition: !airborne
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	SelectionDecorations:
+	SpawnActorOnDeath:
+		Actor: TRAN.Husk
+	SmokeTrailWhenDamaged:
+		Offset: -427,0,0
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
+	Selectable:
+		DecorationBounds: 36,28
+	Rearmable:
+		RearmActors: phpad
+	Cargo:
+		Types: Infantry, Vehicles
+		MaxWeight: 8
+		PipCount: 8
+    RenderSprites:
+        Image: TRAN
+        
+FIREBOMBER:
+	Inherits: ^Plane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 50
+		Prerequisites: ~afld, stek, ~techlevel.high, ~aircraft.proles
+		BuildDurationModifier: 50
+		Description: Pleasant warmth for a winter day.\nAnti-infantry
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: FireBomber
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 6000
+	RevealsShroud:
+		Range: 13c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 11c0
+		Type: GroundPosition
+	Armament:
+		Weapon: FireballLauncher
+		LocalOffset: 512,0,0
+	AttackAircraft:
+		FacingTolerance: 20
+	Aircraft:
+		CruiseAltitude: 2560
+		InitialFacing: 192
+		TurnSpeed: 4
+		Speed: 223
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	ReturnOnIdle:
+	Selectable:
+		Bounds: 36,28,0,2
+		DecorationBounds: 40,29,0,1
+	SelectionDecorations:
+	Contrail@1:
+		Offset: -598,-683,0
+	Contrail@2:
+		Offset: -598,683,0
+	SpawnActorOnDeath:
+		Actor: MIG.Husk
+	SmokeTrailWhenDamaged:
+		Offset: -853,0,171
+		Interval: 2
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
+	Rearmable:
+		RearmActors: afld, afld.ukraine
+    RenderSprites:
+        Image: MIG
+        
 HELI:
 	Inherits: ^Helicopter
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
