@@ -157,7 +157,6 @@ HOSP:
 		MaxWeight: 4
 		PipCount: 4
     AttackGarrisoned:
-		RequiresCondition: !build-incomplete
 		Armaments: garrisoned
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853
@@ -177,7 +176,6 @@ HOSP:
 		MaxWeight: 4
 		PipCount: 4
     AttackGarrisoned:
-		RequiresCondition: !build-incomplete
 		Armaments: garrisoned
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853
