@@ -243,7 +243,7 @@ World:
 		OuterSupportRadius: 5
     MPStartUnits@lightproles:
 		Class: light
-		Races: proles
+		ClassName: proles
 		BaseActor: mcv
 		SupportActors:
 		InnerSupportRadius: 3
@@ -266,7 +266,7 @@ World:
 		OuterSupportRadius: 5
     MPStartUnits@heavyproles:
 		Class: heavy
-		Races: proles
+		ClassName: proles
 		BaseActor: mcv
 		SupportActors:
 		InnerSupportRadius: 3
