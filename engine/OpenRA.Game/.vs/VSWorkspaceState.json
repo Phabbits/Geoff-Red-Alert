@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\GameRules",
+    "\\Graphics",
+    "\\Input",
+    "\\Map",
+    "\\Network",
+    "\\Orders",
+    "\\Server"
+  ],
+  "SelectedNode": "\\Map\\Map.cs",
+  "PreviewInSolutionExplorer": false
+}
