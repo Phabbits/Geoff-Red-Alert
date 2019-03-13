@@ -151,7 +151,7 @@ HOSP:
     Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 6c0
+		Range: 7c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
@@ -178,7 +178,7 @@ HOSP:
     Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 6c0
+		Range: 7c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
