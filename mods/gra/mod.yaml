@@ -37,6 +37,7 @@ Packages:
 
 MapFolders:
 	ra|maps: System
+    gra|maps: User
 	~^maps/ra/1: User
 
 Rules:
