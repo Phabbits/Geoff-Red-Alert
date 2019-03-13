@@ -236,6 +236,9 @@ e3:
 		Start: 192
 		Length: 10
 		Facings: 8
+    garrison-muzzle:
+		Length: 0
+		Facings: 8
 	icon: e3icon
 
 e6:
@@ -249,6 +252,10 @@ e6:
 		Length: 6
 		Facings: 8
 		Tick: 100
+    shoot:
+		Start: 250
+		Length: 6
+		Facings: 8
 	parachute:
 		Start: 210
 	idle1:
@@ -301,6 +308,9 @@ e6:
 		Length: 4
 		Facings: 8
 		Tick: 100
+    garrison-muzzle:
+		Length: 0
+		Facings: 8
 	icon: e6icon
 
 medi:
@@ -493,6 +503,9 @@ e2:
 	prone-throw:
 		Start: 288
 		Length: 12
+		Facings: 8
+    garrison-muzzle:
+		Length: 0
 		Facings: 8
 	icon: e2icon
 
@@ -814,6 +827,9 @@ e4:
 		Start: 256
 		Length: 16
 		Facings: 8
+    garrison-muzzle:
+		Length: 0
+		Facings: 8
 	icon: e4icon
 
 gnrl:
@@ -958,10 +974,15 @@ shok:
 		TilesetOverrides:
 			DESERT: TEMPERAT
 			INTERIOR: TEMPERAT
+    garrison-muzzle:
+		Length: 0
+		Facings: 8
 	icon: shokicon
 
 c1:
 	stand:
+		Facings: 8
+    stand2:
 		Facings: 8
 	panic-stand:
 		Start: 8
@@ -974,6 +995,16 @@ c1:
 	shoot:
 		Start: 120
 		Length: 4
+		Facings: 8
+    parachute:
+		Facings: 8
+    prone-shoot:
+		Facings: 8
+    prone-run:
+		Facings: 8
+    idle1:
+		Facings: 8
+    idle2:
 		Facings: 8
 	die1:
 		Start: 152
@@ -1009,6 +1040,9 @@ c1:
 		Length: 6
 		Facings: 8
 		Tick: 80
+    garrison-muzzle:
+		Length: 0
+		Facings: 8
     icon: e1
 
 c2:

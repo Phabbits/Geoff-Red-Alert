@@ -423,7 +423,7 @@ HARV:
 		Type: Heavy
 	Mobile:
 		Speed: 85
-		Locomotor: heavywheeled
+		Locomotor: heavytracked
 	RevealsShroud:
 		Range: 4c0
 	WithHarvestAnimation:
