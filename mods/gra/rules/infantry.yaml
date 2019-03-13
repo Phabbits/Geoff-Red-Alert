@@ -179,7 +179,7 @@ CIV:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 10
 		Prerequisites: ~barracks, ~techlevel.infonly, ~infantry.proles
-		Description: The classic prole.\n  Strong vs Oppresive Regimes\n  Weak vs Oppresive Regime's guns
+		Description: The classic prole.\nStrong vs Oppresive Regimes\nWeak vs Oppresive Regime's guns
 	Selectable:
 		Class: E1
 	Valued:
@@ -191,11 +191,10 @@ CIV:
 	Health:
 		HP: 2000
 	Armament@PRIMARY:
-		Weapon: Pistol
+		Weapon: CivPistol
 	Armament@GARRISONED:
 		Name: garrisoned
-		Weapon: Vulcan
-		MuzzleSequence: garrison-muzzle
+		Weapon: CivPistol
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -207,6 +206,54 @@ CIV:
         Image: C1
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
+
+SNKCIV:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 130
+	Tooltip:
+		Name: Sneaky Civilian
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 80
+		Prerequisites: ~infantry.proles
+		Description: A guy in camo.\nSomeone gave him a gun.
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 6c0
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry
+	Armament@PRIMARY:
+		Weapon: M1Carbine
+	Armament@GARRISONED:
+		Name: M1Carbine
+		Weapon: M1Carbine
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Cloak:
+		InitialDelay: 130
+		CloakDelay: 80
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	-MustBeDestroyed:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+    RenderSprites:
+        Image: E1
         
 BERS:
 	Inherits: ^Soldier
@@ -329,6 +376,57 @@ BUTCH:
         Image: E3
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
+BMBR:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 40
+		Prerequisites: ~barr, ~techlevel.infonly, ~infantry.proles
+		Description: He go kaplooey
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Suicide Bomber
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 5000
+	Mobile:
+		Speed: 90
+	Armament@PRIMARY:
+		Weapon: Fist
+		LocalOffset: 0,0,555
+		FireDelay: 15
+	TakeCover:
+		ProneOffset: 256,64,-331
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: throw
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+    Cloak:
+		InitialDelay: 250
+		CloakDelay: 150
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Explodes:
+		Weapon: BarrelExplode
+		EmptyWeapon: BarrelExplode
+		DamageSource: Killer
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+    RenderSprites:
+        Image: E2
 E1R1:
 	Inherits: E1
 	RenderSprites:

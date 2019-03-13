@@ -224,6 +224,18 @@ Mandible:
 			None: 90
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 
+Fist:
+	Inherits: Claw
+	ReloadDelay: 10
+	Burst: 2
+	BurstDelays: 14
+	StartBurstReport: antbite.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 500
+		Versus:
+			None: 90
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath        
+
 MandibleHeavy:
 	Inherits: Claw
 	ReloadDelay: 15

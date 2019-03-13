@@ -245,6 +245,20 @@ Pistol:
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 
+CivPistol:
+	Inherits: ^LightMG
+	ReloadDelay: 7
+	Range: 3c0
+	Report: gun27.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 250
+		Versus:
+			None: 100
+	Warhead@2Eff: CreateEffect
+		Explosions: piff
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+
 Shotgun:
 	Inherits: ^LightMG
 	ReloadDelay: 7
