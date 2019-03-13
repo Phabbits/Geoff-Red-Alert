@@ -155,13 +155,13 @@ WATERBOMBER:
 		BuildDurationModifier: 50
 		Description: Slow, powerful, anti-navy bomber. 
 	Valued:
-		Cost: 3500
+		Cost: 2000
 	Tooltip:
 		Name: WaterBomber
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9000
+		HP: 15000
 	RevealsShroud:
 		Range: 8c0
 		Type: GroundPosition

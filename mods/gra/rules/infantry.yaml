@@ -183,7 +183,7 @@ CIV:
 	Selectable:
 		Class: E1
 	Valued:
-		Cost: 80
+		Cost: 60
 	Tooltip:
 		Name: Civilian
 	UpdatesPlayerStatistics:
@@ -265,7 +265,7 @@ TOW:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 12000
     Armament@PRIMARY:
 		Weapon: PortaTesla
 		LocalOffset: 427,0,341
@@ -301,15 +301,17 @@ BUTCH:
 	Selectable:
 		Class: E1
 	Valued:
-		Cost: 900
+		Cost: 1000
 	Tooltip:
 		Name: Butch
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 20000
     Armament@PRIMARY:
 		Weapon: 105mm
+    Armament@SECONDARY
+        Weapon: 105mm
     Armor:
         Type: Medium
 	Armament@GARRISONED:

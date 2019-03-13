@@ -56,7 +56,7 @@ LRNUKEL:
 		Prerequisites: dome, stek, ~vehicles.soviet, ~techlevel.high, ~!vehicles.proles
 		Description: Long-range nuclear missle launcher.
 	Valued:
-		Cost: 9000
+		Cost: 6000
 	Tooltip:
 		Name: Long Range NUKE Launcher
 	UpdatesPlayerStatistics:
@@ -302,6 +302,7 @@ MM2K:
 		BuildPaletteOrder: 180
 		Prerequisites: fix, stek, ~techlevel.high, ~vehicles.proles
 		BuildDurationModifier: 50
+        BuildLimit: 1
 		Description: Tiberian Sunnnnnnnn!
 	Valued:
 		Cost: 8000
@@ -311,7 +312,7 @@ MM2K:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 200000
+		HP: 300000
 	Armor:
 		Type: Heavy
 	Mobile:
