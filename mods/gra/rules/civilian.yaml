@@ -147,11 +147,6 @@ HOSP:
 
 ^CIVGARR
     Inherits: ^CivBuilding
-    RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
     CaptureManager:
 	Capturable:
 		Types: building
@@ -171,11 +166,6 @@ HOSP:
 
 ^DesertCIVGARR
     Inherits: ^DesertCivBuilding
-    RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
     CaptureManager:
 	Capturable:
 		Types: building
