@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Traits\Render\WithSpriteControlGroupDecoration.cs" />
     <Compile Include="Traits\Render\WithTextControlGroupDecoration.cs" />
+    <Compile Include="Traits\World\ValidateOrder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterBuild">

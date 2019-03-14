@@ -59,7 +59,7 @@ namespace OpenRA.Mods.Common.Traits.Render
 			foreach (var r in DrawControlGroup(self, wr, pal))
 				yield return r;
 		}
-
+        
 		bool IRenderAboveShroudWhenSelected.SpatiallyPartitionable { get { return true; } }
 
 		IEnumerable<IRenderable> DrawControlGroup(Actor self, WorldRenderer wr, PaletteReference palette)
