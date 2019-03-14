@@ -143,7 +143,6 @@ MIG:
 	Rearmable:
 		RearmActors: afld, afld.ukraine
 
-
 WATERBOMBER:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -550,7 +549,7 @@ HIND:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 20
-		Prerequisites: ~hpad, ~techlevel.medium
+		Prerequisites: ~hpad, ~techlevel.medium, ~!aircraft.ira
 		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 1350
@@ -611,6 +610,81 @@ HIND:
 	Rearmable:
 		RearmActors: hpad
 
+StealthBMBR:
+	Inherits: ^Helicopter
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 40
+		Prerequisites: ~hpad, atek, ~techlevel.high
+		BuildDurationModifier: 50
+		Description: Stealth chopper with missles\nStrong vs Buildings, Vehicles, Aircraft\n  Weak vs Infantry
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: F-35 Stealth Fighter
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 12000
+	RevealsShroud:
+		Range: 12c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 10c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: HellfireAA
+		LocalOffset: 0,-213,-85, 0,213,-85
+		PauseOnCondition: !ammo
+	Armament@SECONDARY:
+		Weapon: HellfireAG
+		LocalOffset: 0,213,-85, 0,-213,-85
+		PauseOnCondition: !ammo
+	AttackAircraft:
+		FacingTolerance: 20
+	Aircraft:
+		LandWhenIdle: false
+		TurnSpeed: 4
+		Speed: 149
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	WithIdleOverlay@ROTORAIR:
+		Offset: 0,0,85
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 0,0,85
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+    Cloak:
+		InitialDelay: 300
+		CloakDelay: 300
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload, Infiltrate, Demolish
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	SelectionDecorations:
+	SpawnActorOnDeath:
+		Actor: HELI.Husk
+	SmokeTrailWhenDamaged:
+		Offset: -427,0,0
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
+	Selectable:
+		DecorationBounds: 36,28
+	Rearmable:
+		RearmActors: hpad
+    RenderSprites:
+        Image: HELI
+        
 U2:
 	Inherits: ^NeutralPlane
 	Health:

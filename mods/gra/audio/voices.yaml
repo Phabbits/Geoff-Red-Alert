@@ -8,6 +8,7 @@ GenericVoice:
 		russia: .r01,.r03
 		ukraine: .r01,.r03
         proles: .r01,.r03
+        ira: .r01,.r03
 	Voices:
 		Select: await1,ready,report1,yessir1
 		Action: ackno,affirm1,noprob,overout,ritaway,roger,ugotit
@@ -26,6 +27,7 @@ VehicleVoice:
 		russia: .r00,.r02
 		ukraine: .r00,.r02
         proles: .r00,.r02
+        ira: .r00,.r02
 	Voices:
 		Select: vehic1,yessir1,report1,await1
 		Action: ackno,affirm1

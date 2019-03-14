@@ -10,6 +10,7 @@ Metrics:
 	FactionSuffix-spain: allies
 	FactionSuffix-greece: allies
 	FactionSuffix-turkey: allies
+    FactionSuffix-ira: allies
 	FactionSuffix-russia: soviet
 	FactionSuffix-soviet: soviet
 	FactionSuffix-ukraine: soviet

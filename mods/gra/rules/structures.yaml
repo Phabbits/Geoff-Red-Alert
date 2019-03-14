@@ -367,6 +367,9 @@ SYRD:
 	ProvidesPrerequisite@germanstructure:
 		RequiresPrerequisites: structures.germany
 		Prerequisite: ships.germany
+    ProvidesPrerequisite@irastructure:
+		Factions: ira
+		Prerequisite: ships.ira
 	ProvidesPrerequisite@buildingname:
 	MapEditorData:
 		ExcludeTilesets: INTERIOR
@@ -1059,6 +1062,9 @@ WEAP:
     ProvidesPrerequisite@prolesstructure:
 		RequiresPrerequisites: structures.proles
 		Prerequisite: vehicles.proles
+    ProvidesPrerequisite@irastructure:
+		Factions: ira
+		Prerequisite: vehicle.ira
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
@@ -1094,7 +1100,7 @@ FACT:
 		Prerequisites: ~disabled
 		Description: Produces structures.
 	ProvidesPrerequisite@allies:
-		Factions: allies, england, france, germany
+		Factions: allies, england, france, germany, ira
 		Prerequisite: structures.allies
 	ProvidesPrerequisite@alliesvanilla:
 		Factions: allies
@@ -1123,6 +1129,9 @@ FACT:
     ProvidesPrerequisite@proles:
 		Factions: proles
 		Prerequisite: structures.proles
+    ProvidesPrerequisite@ira:
+		Factions: ira
+		Prerequisite: structures.ira
 	Health:
 		HP: 150000
 	Armor:
@@ -1375,6 +1384,9 @@ HPAD:
 	ProvidesPrerequisite@germanstructure:
 		RequiresPrerequisites: structures.germany
 		Prerequisite: aircraft.germany
+    ProvidesPrerequisite@irastructure:
+		Factions: ira
+		Prerequisite: aircraft.ira
 	ProvidesPrerequisite@buildingname:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
@@ -2032,6 +2044,9 @@ TENT:
 	ProvidesPrerequisite@germanstructure:
 		RequiresPrerequisites: structures.germany
 		Prerequisite: infantry.germany
+    ProvidesPrerequisite@irastructure:
+		Factions: ira
+		Prerequisite: infantry.ira
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:

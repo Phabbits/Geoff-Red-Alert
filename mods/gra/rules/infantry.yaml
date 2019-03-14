@@ -143,7 +143,7 @@ E1:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 10
-		Prerequisites: ~barracks, ~techlevel.infonly, ~!infantry.proles
+		Prerequisites: ~barracks, ~techlevel.infonly, ~!infantry.proles, ~!infantry.ira
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Selectable:
 		Class: E1
@@ -212,15 +212,15 @@ SNKCIV:
 	Valued:
 		Cost: 130
 	Tooltip:
-		Name: Sneaky Civilian
+		Name: Guerilla Soldier
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 80
-		Prerequisites: ~infantry.proles
-		Description: A guy in camo.\nSomeone gave him a gun.
+		Prerequisites: ~infantry.ira
+		Description: He is... very very sneaky.
 	Health:
 		HP: 3000
 	RevealsShroud:
@@ -306,13 +306,13 @@ TOW:
 	Selectable:
 		Class: E1
 	Valued:
-		Cost: 750
+		Cost: 1000
 	Tooltip:
 		Name: The Tower
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 24000
     Armament@PRIMARY:
 		Weapon: PortaTesla
 		LocalOffset: 427,0,341
@@ -383,7 +383,7 @@ BMBR:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 40
-		Prerequisites: ~barr, ~techlevel.infonly, ~infantry.proles
+		Prerequisites: ~tent, ~techlevel.infonly, ~infantry.ira
 		Description: He go kaplooey
 	Valued:
 		Cost: 400
@@ -1007,7 +1007,7 @@ SNIPER:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 80
-		Prerequisites: ~infantry.proles
+		Prerequisites: ~infantry.ira
 		Description: Elite sniper infantry unit.\nCan detect cloaked units.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 8000

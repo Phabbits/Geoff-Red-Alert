@@ -53,8 +53,9 @@ LRNUKEL:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 90
-		Prerequisites: dome, stek, ~vehicles.soviet, ~techlevel.high, ~!vehicles.proles
-		Description: Long-range nuclear missle launcher.
+		Prerequisites: dome, stek, fix, ~vehicles.soviet, ~techlevel.high, ~!vehicles.proles
+		Description: Long-range nuclear missle launcher\nMaximum of one
+        BuildLimit: 1
 	Valued:
 		Cost: 6000
 	Tooltip:
@@ -62,11 +63,11 @@ LRNUKEL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 20000
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 85
+		Speed: 60
 	RevealsShroud:
 		Range: 7c0
 		RevealGeneratedShroud: False
@@ -75,6 +76,15 @@ LRNUKEL:
 	Armament:
 		Weapon: SCUDAtomic
 		ReloadingCondition: reloading
+        PauseOnCondition: !ammo
+        DisplayRadarPing: True
+    RevealOnFire:
+        Duration: 100
+        Radius: 2c0
+    AmmoPool:
+        AmmoCondition: ammo
+        PipType: Red
+        ReloadDelay: 500
 	AutoTarget:
 		ScanRadius: 10
 	AttackFrontal:
@@ -95,6 +105,8 @@ LRNUKEL:
 		Prerequisites: vehicles.upgraded
 	Selectable:
 		DecorationBounds: 28,28
+    Rearmable:
+		RearmActors: fix
         
 1TNK:
 	Inherits: ^TrackedVehicle
