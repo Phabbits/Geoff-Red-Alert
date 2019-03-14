@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -29,20 +29,15 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-      <Reference Include="System" />
-      <Reference Include="System.Core" />
-      <Reference Include="System.Drawing" />
-      <Reference Include="Eluant">
-        <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
-        <Private>False</Private>
-      </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Eluant">
+      <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Orders\UnitOrderGenerator.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Orders\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">
       <Project>{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}</Project>
@@ -54,6 +49,11 @@
       <Name>OpenRA.Game</Name>
       <Private>False</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Traits\Render\WithSpriteControlGroupDecoration.cs" />
+    <Compile Include="Traits\Render\WithTextControlGroupDecoration.cs" />
+    <Compile Include="Traits\World\ValidateOrder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterBuild">
