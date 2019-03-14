@@ -43,7 +43,7 @@ MapFolders:
 Rules:
 	ra|rules/misc.yaml
 	ra|rules/ai.yaml
-	ra|rules/player.yaml
+	gra|rules/player.yaml
 	ra|rules/palettes.yaml
 	gra|rules/world.yaml
 	gra|rules/defaults.yaml

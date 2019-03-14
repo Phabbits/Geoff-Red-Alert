@@ -144,3 +144,5 @@ Player:
 	ResourceStorageWarning:
 	PlayerExperience:
 	ConditionManager:
+    ProximityCaptor:
+        Types: Infantry
