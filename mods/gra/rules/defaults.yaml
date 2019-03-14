@@ -922,10 +922,6 @@
 		PortCones: 88, 88, 88, 88, 88, 88
 	RenderRangeCircle:
 		FallbackRange: 6c0
-    RepairableBuilding:
-		RepairStep: 700
-		PlayerExperience: 25
-		RepairingNotification: Repairing
     
 ^Tree:
 	Inherits@1: ^Cover
