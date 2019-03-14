@@ -156,10 +156,12 @@ HOSP:
 	RevealsShroud@GAPGEN:
 		Range: 5c0
     CaptureManager:
-	Capturable:
-		Types: building
-	CapturableProgressBar:
-	CapturableProgressBlink:
+    ProximityCapturable:
+        Range: 3c0
+        CaptorTypes: Infantry
+        MustBeClear: False
+        Sticky: True
+        Permanent: False
     Cargo:
 		Types: Infantry
 		MaxWeight: 4
@@ -171,6 +173,11 @@ HOSP:
 		PortCones: 88, 88, 88, 88, 88, 88
 	RenderRangeCircle:
 		FallbackRange: 6c0
+    RepairableBuilding:
+		RepairStep: 700
+		PlayerExperience: 25
+		RepairingNotification: Repairing
+	EngineerRepairable:
 
 ^DesertCIVGARR
     Inherits: ^DesertCivBuilding
@@ -183,10 +190,12 @@ HOSP:
 	RevealsShroud@GAPGEN:
 		Range: 5c0
     CaptureManager:
-	Capturable:
-		Types: building
-	CapturableProgressBar:
-	CapturableProgressBlink:
+    ProximityCapturable:
+        Range: 3c0
+        CaptorTypes: Infantry
+        MustBeClear: False
+        Sticky: True
+        Permanent: False
     Cargo:
 		Types: Infantry
 		MaxWeight: 4
@@ -198,6 +207,11 @@ HOSP:
 		PortCones: 88, 88, 88, 88, 88, 88
 	RenderRangeCircle:
 		FallbackRange: 6c0
+    RepairableBuilding:
+		RepairStep: 700
+		PlayerExperience: 25
+		RepairingNotification: Repairing
+	EngineerRepairable:
 
 V01:
 	Inherits: ^CIVGARR

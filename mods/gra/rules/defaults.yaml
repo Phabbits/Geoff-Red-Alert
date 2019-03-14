@@ -880,10 +880,56 @@
 		ExcludeTilesets: INTERIOR
 	Interactable:
 
-^Tree:
-	Inherits@1: ^SpriteActor
+^Cover
+    Inherits@1: ^ExistsInWorld
+    Inherits@2: ^SpriteActor
 	Inherits@shape: ^1x1Shape
-	Interactable:
+	Inherits@bounty: ^GlobalBounty
+    Inherits@AUTOTARGET: ^AutoTargetAll
+    Huntable:
+    SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Priority: 3
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		TerrainTypes: Clear,Road
+		RequiresBaseProvider: True
+    CaptureNotification:
+    Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+    CaptureManager:
+    ProximityCapturable:
+        Range: 3c0
+        CaptorTypes: Infantry
+        MustBeClear: False
+        Sticky: True
+        Permanent: False
+    Cargo:
+		Types: Infantry
+		MaxWeight: 1
+		PipCount: 1
+    AttackGarrisoned:
+		Armaments: garrisoned
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 88, 88, 88, 88, 88, 88
+	RenderRangeCircle:
+		FallbackRange: 6c0
+    RepairableBuilding:
+		RepairStep: 700
+		PlayerExperience: 25
+		RepairingNotification: Repairing
+    
+^Tree:
+	Inherits@1: ^Cover
+	Inherits@shape: ^1x1Shape
 	Tooltip:
 		Name: Tree
 		ShowOwnerRow: false
@@ -901,7 +947,7 @@
 	Armor:
 		Type: Wood
 	Targetable:
-		TargetTypes: Trees
+		TargetTypes: Ground, Trees
 	WithDamageOverlay@SmallBurn:
 		DamageTypes: Incendiary
 		Image: burn-s
