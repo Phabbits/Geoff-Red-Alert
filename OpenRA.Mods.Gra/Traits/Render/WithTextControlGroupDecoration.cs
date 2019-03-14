@@ -69,7 +69,7 @@ namespace OpenRA.Mods.Common.Traits.Render
 
 		IEnumerable<IRenderable> IRenderAboveShroudWhenSelected.RenderAboveShroud(Actor self, WorldRenderer wr)
 		{
-			if (!self.Owner.IsMeleedWith(wr.World.LocalPlayer))
+			if (!self.Owner.IsAlliedWith(wr.World.LocalPlayer))
 				yield break;
 
 			if (self.World.FogObscures(self))
