@@ -189,13 +189,13 @@ SCUDAtomic:
 	Range: 15c0
 	MinRange: 10c0
     Projectile: Bullet
-        Speed: 50
-        Blockable: false
+        Speed: 40
+        Blockable: true
         TrailImage: smokey
         TrailDelay: 5
         Inaccuracy: 213
         Shadow: True
-        LaunchAngle: 120
+        LaunchAngle: 180
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 1c0
@@ -219,7 +219,7 @@ SCUDAtomic:
 		ValidTargets: Ground, Water, Air
 	Warhead@5Dam_areanuke1: SpreadDamage
 		Spread: 2c0
-		Damage: 3000
+		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
 		ValidTargets: Ground, Trees, Water, Underwater, Air
@@ -241,7 +241,7 @@ SCUDAtomic:
 		ImpactActors: false
 	Warhead@9Dam_areanuke2: SpreadDamage
 		Spread: 3c0
-		Damage: 3000
+		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
 		ValidTargets: Ground, Water, Underwater, Air
@@ -251,7 +251,7 @@ SCUDAtomic:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
 	Warhead@10Dam_areanuke2: SpreadDamage
 		Spread: 3c0
-		Damage: 6000
+		Damage: 4000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
 		ValidTargets: Trees
@@ -266,7 +266,7 @@ SCUDAtomic:
 		Delay: 10
 	Warhead@13Dam_areanuke3: SpreadDamage
 		Spread: 4c0
-		Damage: 3000
+		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
 		ValidTargets: Ground, Water, Underwater, Air
@@ -275,7 +275,7 @@ SCUDAtomic:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
 	Warhead@14Dam_areanuke3: SpreadDamage
 		Spread: 4c0
-		Damage: 6000
+		Damage: 4000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
 		ValidTargets: Trees
@@ -290,7 +290,7 @@ SCUDAtomic:
 		Delay: 15
 	Warhead@17Dam_areanuke4: SpreadDamage
 		Spread: 5c0
-		Damage: 3000
+		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
 		ValidTargets: Ground, Water, Underwater, Air
@@ -299,7 +299,7 @@ SCUDAtomic:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
 	Warhead@18Dam_areanuke4: SpreadDamage
 		Spread: 5c0
-		Damage: 6000
+		Damage: 4000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
 		ValidTargets: Trees

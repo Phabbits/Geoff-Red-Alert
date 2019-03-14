@@ -573,6 +573,7 @@ flags: buttons.png
 	ukraine: 30,127,30,15
 	england: 60,127,30,15
     proles: 0,157,30,15
+    ira: 30,157,30,15
 	
 	germany: 0,142,30,15
 	spain: 30,142,30,15
