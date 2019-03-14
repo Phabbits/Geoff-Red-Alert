@@ -370,7 +370,7 @@ V19:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, NoAutoTarget
 
 V19.Husk:
-	Inherits: ^CIVGARR
+	Inherits: ^CivBuilding
 	RenderSprites:
 		Palette: player
 	Tooltip:
