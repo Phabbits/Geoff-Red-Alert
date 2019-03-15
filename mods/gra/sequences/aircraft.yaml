@@ -74,3 +74,14 @@ badr:
 	idle:
 		Facings: 16
     icon: migicon
+    
+#MOD
+orca:
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	move:
+		Start: 32
+		Facings: 32
+	icon: orcaicnh.tem
+		AddExtension: False

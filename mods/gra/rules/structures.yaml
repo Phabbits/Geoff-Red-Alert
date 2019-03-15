@@ -62,6 +62,73 @@ MSLO:
 		RequiredForShortGame: false
 	WithNukeLaunchAnimation:
 		RequiresCondition: !build-incomplete
+        
+BIGMSLO:
+	Inherits: ^ScienceBuilding
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Inherits@shape: ^2x1Shape
+	Selectable:
+		Bounds: 48,24
+	Valued:
+		Cost: 5000
+	Tooltip:
+		Name: Tsar Bomba
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 140
+		Prerequisites: techcenter, ~techlevel.unrestricted, structures.allies, ~structures.ira
+		BuildLimit: 1
+		Description: Provides a Tsar Bomba.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Tsar Bomba
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Health:
+		HP: 100000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 6c0
+		RequiresCondition: !disabled
+		RevealGeneratedShroud: False
+	RevealsShroud@Offline:
+		Range: 5c0
+		RequiresCondition: disabled
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+		RequiresCondition: !disabled
+	NukePower:
+		PauseOnCondition: disabled
+		Cursor: nuke
+		Icon: abomb
+		ChargeInterval: 22500
+		Description: Tsar Bomba
+		LongDesc: Wipes out a City
+		BeginChargeSpeechNotification: AbombPrepping
+		EndChargeSpeechNotification: AbombReady
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: AbombLaunchDetected
+		MissileWeapon: atomic
+		MissileDelay: 5
+		SpawnOffset: 1c0,427,0
+		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPoster: atomicon
+		FlashType: Nuke
+		CameraRange: 10c0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+	SupportPowerChargeBar:
+	Power:
+		Amount: -300
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	WithNukeLaunchAnimation:
+		RequiresCondition: !build-incomplete
+    RenderSprites:
+        Image: MSLO
 
 GAP:
 	Inherits: ^ScienceBuilding
@@ -73,7 +140,7 @@ GAP:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 110
-		Prerequisites: atek, ~structures.allies, ~techlevel.high
+		Prerequisites: atek, ~structures.allies, ~techlevel.high, ~!structures.ira
 		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
 	Selectable:
 		Bounds: 24,24
@@ -109,6 +176,54 @@ GAP:
 			TopLeft: -512, -512
 			BottomRight: 512, 512
 
+BIGGAP:
+	Inherits: ^ScienceBuilding
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: NightMaker
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 110
+		Prerequisites: atek, ~structures.ira, ~techlevel.high
+		Description: Hides your base in the darkness...
+	Selectable:
+		Bounds: 24,24
+		DecorationBounds: 24,48,0,-12
+	SelectionDecorations:
+	WithSpriteBody:
+		PauseOnCondition: disabled
+	Health:
+		HP: 70000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	CreatesShroud:
+		Range: 10c0
+		RequiresCondition: !disabled
+	RenderShroudCircle:
+	Power:
+		Amount: -80
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	-AcceptsDeliveredCash:
+	Explodes:
+		Weapon: SmallBuildingExplode
+		EmptyWeapon: SmallBuildingExplode
+	HitShape:
+		Type: Rectangle
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+    RenderSprites:
+        Image: GAP
+            
 SPEN:
 	Inherits: ^Building
 	Selectable:
@@ -534,7 +649,7 @@ TSLA:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 80
-		Prerequisites: weap, ~structures.soviet, ~techlevel.medium
+		Prerequisites: weap, ~structures.soviet, ~techlevel.medium, ~!structures.proles
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 	Valued:
 		Cost: 1200
@@ -571,6 +686,53 @@ TSLA:
 		Range: 6c0
 		RequiresCondition: !disabled
 	ProvidesPrerequisite@buildingname:
+    
+ZAP:
+	Inherits: ^Defense
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 80
+		Prerequisites: weap, ~structures.proles, ~techlevel.medium
+		Description: Makes their hair stand up.
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Zap-O-Matic
+	Selectable:
+		Bounds: 24,24
+		DecorationBounds: 24,40,0,-8
+	SelectionDecorations:
+	Health:
+		HP: 80000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 6c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	WithTeslaChargeAnimation:
+	Armament:
+		Weapon: Zapper
+		LocalOffset: 0,0,896
+	AttackTesla:
+		RequiresCondition: !build-incomplete
+		PauseOnCondition: disabled
+		ChargeAudio: tslachg2.aud
+		MaxCharges: 3
+		ReloadDelay: 2
+	Power:
+		Amount: -150
+	DetectCloaked:
+		Range: 6c0
+		RequiresCondition: !disabled
+	ProvidesPrerequisite@buildingname:
+    RenderSprites:
+        Image: obli
 
 AGUN:
 	Inherits: ^Defense
@@ -579,7 +741,7 @@ AGUN:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: dome, ~structures.allies, ~techlevel.medium
+		Prerequisites: dome, ~structures.allies, ~techlevel.medium, ~!structures.ira
 		Description: Anti-Air base defense.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
 		Cost: 800
@@ -619,6 +781,56 @@ AGUN:
 		Amount: -50
 	BodyOrientation:
 		UseClassicFacingFudge: True
+   
+WATCH:
+	Inherits: ^Defense
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: dome, ~structures.ira, ~techlevel.medium
+		Description: Anti-Air base defense.\nProvides a long range of vision\n  Strong vs Aircraft\n  Weak vs Ground units
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Watch Tower
+	Selectable:
+		Bounds: 24,24
+		DecorationBounds: 24,32,0,-4
+	SelectionDecorations:
+	Health:
+		HP: 40000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 11c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 6c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Turreted:
+		TurnSpeed: 15
+		InitialFacing: 224
+	-WithSpriteBody:
+	WithEmbeddedTurretSpriteBody:
+	Armament:
+		Weapon: SM-ZSU-23
+		LocalOffset: 520,100,450, 520,-150,450
+		MuzzleSequence: muzzle
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+		PauseOnCondition: disabled
+	WithMuzzleOverlay:
+	RenderRangeCircle:
+		RangeCircleType: aa
+	Power:
+		Amount: -50
+	BodyOrientation:
+		UseClassicFacingFudge: True
+    RenderSprites:
+        Image: GTWR
 
 DOME:
 	Inherits: ^Building
@@ -732,7 +944,7 @@ HBOX:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 50
-		Prerequisites: tent, ~structures.allies, ~techlevel.medium
+		Prerequisites: tent, ~structures.allies, ~techlevel.medium, ~!structures.ira
 		Description: Camouflaged static defense with a fireport\nfor a garrisoned soldier.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 700
@@ -779,6 +991,65 @@ HBOX:
 	Power:
 		Amount: -20
 	-MustBeDestroyed:
+    
+BIGHBOX:
+	Inherits: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Hideout
+	Building:
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 50
+		Prerequisites: tent, ~structures.ira, ~techlevel.medium
+		Description: Camouflaged static defense with a fireport\nfor a garrisoned soldier.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+	Valued:
+		Cost: 900
+	CustomSellValue:
+		Value: 650
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 30
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Turreted:
+		TurnSpeed: 255
+	-QuantizeFacingsFromSequence:
+	BodyOrientation:
+		QuantizedFacings: 8
+	Cargo:
+		Types: Infantry
+		MaxWeight: 6
+		PipCount: 6
+		InitialUnits: e1
+	-SpawnActorsOnSell:
+	DetectCloaked:
+		Range: 6c0
+	RenderRangeCircle:
+		FallbackRange: 6c0
+	AttackGarrisoned:
+		RequiresCondition: !build-incomplete
+		Armaments: garrisoned
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 88, 88, 88, 88, 88, 88
+	Power:
+		Amount: -20
+	-MustBeDestroyed:
+    RenderSprites:
+        Image: HBOX
 
 GUN:
 	Inherits: ^Defense
@@ -786,7 +1057,7 @@ GUN:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 70
-		Prerequisites: tent, ~structures.allies, ~techlevel.medium
+		Prerequisites: tent, ~structures.allies, ~techlevel.medium, ~!structures.ira
 		Description: Anti-Armor base defense.\nCan detect cloaked units.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 800
@@ -822,6 +1093,52 @@ GUN:
 		Range: 6c0
 	BodyOrientation:
 		UseClassicFacingFudge: True
+        
+ARTGUN:
+	Inherits: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 70
+		Prerequisites: tent, ~structures.allies, ~techlevel.medium
+		Description: Go long.
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Grenade Lobber
+	Building:
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Turreted:
+		TurnSpeed: 6
+		InitialFacing: 56
+	-WithSpriteBody:
+	WithEmbeddedTurretSpriteBody:
+	Armament:
+		Weapon: TWRGrenade
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+	WithMuzzleOverlay:
+	Power:
+		Amount: -60
+	DetectCloaked:
+		Range: 6c0
+	BodyOrientation:
+		UseClassicFacingFudge: True
+    RenderSprites:
+        Image: atwr
+
 
 FTUR:
 	Inherits: ^Defense
@@ -1064,7 +1381,7 @@ WEAP:
 		Prerequisite: vehicles.proles
     ProvidesPrerequisite@irastructure:
 		Factions: ira
-		Prerequisite: vehicle.ira
+		Prerequisite: vehicles.ira
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
@@ -1774,7 +2091,7 @@ NPWR:
 		EmptyWeapon: MiniNuke
 		DamageSource: Killer
     RenderSprites:
-        Image: BIO
+        Image: nuk2
 
 STEK:
 	Inherits: ^ScienceBuilding
@@ -1915,8 +2232,8 @@ KENN:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 175
-		Prerequisites: anypower, ~structures.soviet, ~techlevel.infonly
-		Description: Trains Attack Dogs.
+		Prerequisites: anypower, ~!structures.france, ~!structures.england, ~!structures.germany, ~techlevel.infonly
+		Description: Trains Attack Dogs (and other things).
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -2163,7 +2480,7 @@ BRIK:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 30
-		Prerequisites: fact, ~techlevel.medium
+		Prerequisites: fact, ~techlevel.medium, ~!structures.proles
 		Description: Stop units and blocks enemy fire.
 	Valued:
 		Cost: 200
@@ -2188,6 +2505,34 @@ BRIK:
 	WithWallSpriteBody:
 		Type: concrete
 
+BIGBRIK:
+	Inherits: ^Wall
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 30
+		Prerequisites: fact, ~techlevel.medium, structures.proles
+		Description: Keeps the bad guys out.
+	Valued:
+		Cost: 600
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Great Wall
+	SoundOnDamageTransition:
+		DamagedSounds: crmble2.aud
+		DestroyedSounds: kaboom30.aud
+	Health:
+		HP: 120000
+	Armor:
+		Type: Concrete
+	BlocksProjectiles:
+	LineBuild:
+		NodeTypes: concrete
+	LineBuildNode:
+		Types: concrete
+	WithWallSpriteBody:
+		Type: concrete
+        
 CYCL:
 	Inherits: ^Wall
 	Tooltip:

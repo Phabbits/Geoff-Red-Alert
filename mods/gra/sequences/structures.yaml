@@ -648,3 +648,120 @@ cycl:
 	damaged-idle:
 		Start: 16
 		Length: 16
+
+#MOD CODE
+gtwr:
+	idle:
+	damaged-idle:
+		Start: 1
+	dead:
+		Start: 2
+		Tick: 800
+	make:
+		Combine:
+			gtwrmake:
+				Length: 17
+			gtwrmake:
+				Start: 19
+		Length: 18
+		Tick: 80
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	icon: gtwricnh.tem
+		AddExtension: False
+
+bigbrik:
+	idle:
+		Length: 16
+	scratched-idle:
+		Start: 16
+		Length: 16
+	damaged-idle:
+		Start: 32
+		Length: 16
+	icon: bigbrikicnh.tem
+		AddExtension: False
+        
+nuk2:
+	idle:
+		Length: 4
+		Tick: 1000
+	damaged-idle:
+		Start: 4
+		Length: 4
+		Tick: 1000
+	dead:
+		Start: 8
+		Tick: 800
+	make: nuk2make
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: nuk2icnh.tem
+		AddExtension: False
+        
+obli:
+	Defaults:
+		Offset: 0,-12
+	idle:
+	damaged-idle:
+		Start: 4
+	active:
+		Length: 4
+		Tick: 680
+	damaged-active:
+		Start: 4
+		Length: 4
+		Tick: 680
+	dead:
+		Start: 8
+		Tick: 800
+	make: oblimake
+		Length: 13
+		Tick: 80
+	bib: mbOBLI
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+		Length: *
+		Offset: -1,-3
+	icon: obliicnh.tem
+		AddExtension: False
+		Offset: 0,0
+        
+atwr:
+	Defaults:
+		Offset: 0,-13
+	idle:
+	damaged-idle:
+		Start: 1
+	dead:
+		Start: 2
+		Tick: 800
+	make: atwrmake
+		Length: *
+		Tick: 80
+	muzzle: gunfire2
+		Length: *
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+		Length: *
+		Offset: -3,0
+	icon: atwricnh.tem
+		AddExtension: False
+		Offset: 0,0

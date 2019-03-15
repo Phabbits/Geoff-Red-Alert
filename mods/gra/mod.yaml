@@ -44,7 +44,7 @@ Rules:
 	ra|rules/misc.yaml
 	ra|rules/ai.yaml
 	gra|rules/player.yaml
-	ra|rules/palettes.yaml
+	gra|rules/palettes.yaml
 	gra|rules/world.yaml
 	gra|rules/defaults.yaml
 	gra|rules/vehicles.yaml
@@ -58,8 +58,8 @@ Rules:
 	ra|rules/fakes.yaml
 
 Sequences:
-	ra|sequences/ships.yaml
-	ra|sequences/vehicles.yaml
+	gra|sequences/ships.yaml
+	gra|sequences/vehicles.yaml
 	gra|sequences/structures.yaml
 	gra|sequences/infantry.yaml
 	gra|sequences/aircraft.yaml
