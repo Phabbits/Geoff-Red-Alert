@@ -77,7 +77,6 @@ LRNUKEL:
 		Weapon: SCUDAtomic
 		ReloadingCondition: reloading
         PauseOnCondition: !ammo
-        DisplayRadarPing: True
     RevealOnFire:
         Duration: 100
         Radius: 2c0

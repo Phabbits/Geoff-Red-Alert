@@ -667,7 +667,6 @@ StealthBMBR:
 		UncloakSound:
 		UncloakOn: Attack, Unload, Infiltrate, Demolish
 		IsPlayerPalette: true
-		PauseOnCondition: cloak-force-disabled
 	AmmoPool:
 		Ammo: 8
 		AmmoCondition: ammo
