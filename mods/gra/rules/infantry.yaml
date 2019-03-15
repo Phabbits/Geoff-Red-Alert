@@ -758,6 +758,9 @@ STAN:
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
 		IsPlayerPalette: true
 		PauseOnCondition: cloak-force-disabled
+    GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
     RenderSprites:

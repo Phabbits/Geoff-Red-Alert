@@ -1411,6 +1411,8 @@ scoutant:
 rmbo:
 	stand:
 		Facings: 8
+    parachute:
+        Facings: 8
 	stand2:
 		Start: 8
 		Facings: 8
@@ -1539,6 +1541,10 @@ c10:
 		Length: 4
 		Facings: 8
 		Tick: 100
+    shoot:
+        Facings: 8
+    parachute:
+        Facings: 8
 	idle1:
 		Start: 114
 		Length: 6
@@ -1603,6 +1609,14 @@ rapt:
 		Start: 80
 		Length: 8
 		Facings: 8
+    eat:
+        Start: 80
+		Length: 8
+		Facings: 8
+    idle1:
+        Facings: 8
+    idle2:
+        Facings: 8
 	die1:
 		Start: 144
 		Length: 40

@@ -623,7 +623,7 @@ BUGGY:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 170
-		RequiresCondition: !notmobile && !being-captured
+		RequiresCondition: !being-captured
 	RevealsShroud:
 		Range: 8c0
 		RevealGeneratedShroud: False

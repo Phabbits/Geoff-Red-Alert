@@ -484,7 +484,7 @@ HELI:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 40
-		Prerequisites: ~hpad, atek, ~techlevel.high, ~!aircaft.ira
+		Prerequisites: ~hpad, atek, ~techlevel.high, ~!aircraft.ira
 		BuildDurationModifier: 50
 		Description: Helicopter gunship armed\nwith multi-purpose missiles.\n  Strong vs Buildings, Vehicles, Aircraft\n  Weak vs Infantry
 	Valued:
