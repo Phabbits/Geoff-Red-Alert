@@ -703,7 +703,7 @@ STAN:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 60
-		Prerequisites: ~barracks, ~techlevel.infonly
+		Prerequisites: ~barracks, ~techlevel.infonly, ~infantry.ira
 		Description: Employee 427's job was simple:\nhe sat at his desk in room 427\nand he pushed buttons on a keyboard.\nCloaked, build limit 1
         BuildLimit: 1
 	Valued:
