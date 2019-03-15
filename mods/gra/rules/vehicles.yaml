@@ -157,7 +157,7 @@ LRNUKEL:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
-		Prerequisites: fix, ~vehicles.allies, ~techlevel.medium
+		Prerequisites: fix, ~vehicles.allies, ~techlevel.medium, ~!vehicles.ira
 		Description: Allied Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 850
@@ -362,7 +362,7 @@ MM2K:
 	Selectable:
 		DecorationBounds: 44,38,0,-4
     RenderSprites:
-        Image: 4TNK
+        Image: htnk
         
 ARTY:
 	Inherits: ^TrackedVehicle
@@ -371,7 +371,7 @@ ARTY:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
-		Prerequisites: dome, ~vehicles.allies, ~techlevel.medium
+		Prerequisites: dome, ~vehicles.allies, ~techlevel.medium, ~!vehicles.ira
 		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
 	Valued:
 		Cost: 850
@@ -503,7 +503,7 @@ JEEP:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
-		Prerequisites: ~vehicles.allies, ~techlevel.low
+		Prerequisites: ~vehicles.allies, ~techlevel.low, ~!vehicles.ira
 		Description: Fast scout & anti-infantry vehicle.\nCan carry one infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Valued:
 		Cost: 500
@@ -546,7 +546,116 @@ JEEP:
 		LoadingCondition: notmobile
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
+     
+HUMVEE:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Prerequisites: ~vehicles.ira, ~techlevel.low
+		Description: Transport that can hold 4 men\nwho can shoot out the doors
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Hum-Vee
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 20000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+		RequiresCondition: !notmobile && !being-captured
+	RevealsShroud:
+		Range: 8c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: 0,0,128
+	Armament:
+		Weapon: M60mg
+		MuzzleSequence: muzzle
+		LocalOffset: 128,0,43
+	AttackGarrisoned:
+		Armaments: garrisoned
+       	PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 88, 88, 88, 88, 88, 88
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		PipCount: 4
+        InitialUnits: SNKCIV
+		LoadingCondition: notmobile
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+    RenderSprites:
+        Image: humvee
+    
 
+BUGGY:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Prerequisites: ~vehicles.proles, ~techlevel.medium
+		Description: Fast scout & anti-air vehicle.\nShoots rockets 
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Buggy
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+		RequiresCondition: !notmobile && !being-captured
+	RevealsShroud:
+		Range: 8c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: 0,0,128
+	Armament@PRIMARY:
+		Weapon: RedEye
+        FireDelay: 20
+		LocalOffset: -528,0,0
+    Armament@SECONDARY:
+        Weapon: RedEye
+		LocalOffset: 528,0,0
+	Armament@TERTIARY:
+		Name: secondary
+        FireDelay: 20
+		Weapon: Dragon
+		LocalOffset: -528,0,0
+    Armament@QUATERNARY:
+		Name: secondary
+		Weapon: Dragon
+		LocalOffset: 528,0,0
+    AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+    RenderSprites:
+        Image: msam
+        
 APC:
 	Inherits: ^TrackedVehicle
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -628,14 +737,14 @@ ARMOR:
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
     RenderSprites:
-        Image: APC
+        Image: apcmcv
 
 MNLY:
 	Inherits: ^TrackedVehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 100
-		Prerequisites: fix, ~techlevel.medium
+		Prerequisites: fix, ~techlevel.medium, ~!vehicles.ira
 		Description: Lays mines to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
 	Valued:
 		Cost: 800
@@ -672,6 +781,51 @@ MNLY:
 		Image: MNLY
 	Rearmable:
 		RearmActors: fix
+        
+BMBLY:
+	Inherits: ^TrackedVehicle
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 100
+		Prerequisites: fix, ~techlevel.medium, ~vehicles.ira
+		Description: Lays bombs to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Bomblayer
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Priority: 5
+	Health:
+		HP: 20000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Minelayer:
+		Mine: MINV
+	MineImmune:
+	AmmoPool:
+		Ammo: 10
+		RearmSound: minelay1.aud
+	DetectCloaked:
+		Range: 5c0
+		CloakTypes: Mine
+	RenderDetectionCircle:
+	Explodes:
+		Weapon: BMMine
+	RenderSprites:
+		Image: MNLY
+	Rearmable:
+		RearmActors: fix
+    RenderSprites:
+        Image: MNLY
 
 TRUK:
 	Inherits: ^Vehicle

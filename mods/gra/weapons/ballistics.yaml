@@ -183,6 +183,31 @@ Grenade:
 	Warhead@4EffWater: CreateEffect
 		Explosions: small_splash
 
+TWRGrenade:
+	Inherits: ^Artillery
+	ReloadDelay: 10
+	MinRange: 4c0
+    Range: 12c0
+	Report: grenade1.aud
+	Projectile: Bullet
+		Speed: 136
+		Inaccuracy: 554
+		Image: BOMB
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 6000
+		Versus:
+			None: 60
+			Wood: 100
+			Light: 25
+			Heavy: 25
+			Concrete: 100
+	Warhead@3Eff: CreateEffect
+		Explosions: med_explosion
+		ImpactSounds: kaboom25.aud
+	Warhead@4EffWater: CreateEffect
+		Explosions: small_splash
+        
 DepthCharge:
 	Inherits: ^Artillery
 	-Report:

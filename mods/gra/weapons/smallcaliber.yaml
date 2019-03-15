@@ -38,6 +38,24 @@ ZSU-23:
 			Heavy: 100
 			Concrete: 50
 
+SM-ZSU-23:
+	Inherits: ^AACannon
+	Burst: 2
+	BurstDelays: 0
+	ReloadDelay: 6
+	Range: 10c0
+	Projectile: Bullet
+		Speed: 3c340
+	Warhead@1Dam: SpreadDamage
+		Damage: 700
+		Versus:
+			None: 25
+			Wood: 75
+			Light: 75
+			Heavy: 100
+			Concrete: 50           
+         
+
 FLAK-23-AA:
 	Inherits: ^AACannon
 	Warhead@1Dam: SpreadDamage

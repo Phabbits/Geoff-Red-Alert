@@ -164,6 +164,19 @@ ATMine:
 	Warhead@Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Structure, Wall, Trees
+        
+BMMine:
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 60000
+		AffectsParent: true
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_explosion
+		ImpactSounds: mineblo1.aud
+	Warhead@Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Structure, Wall, Trees
 
 APMine:
 	Inherits: ATMine

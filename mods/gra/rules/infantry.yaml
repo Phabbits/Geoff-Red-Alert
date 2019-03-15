@@ -4,7 +4,7 @@ DOG:
 		Queue: Infantry
 		BuildAtProductionType: Dog
 		BuildPaletteOrder: 50
-		Prerequisites: ~kenn, ~techlevel.infonly, ~!structures.proles
+		Prerequisites: ~kenn, ~techlevel.infonly, ~!structures.proles, ~!structures.ira
 		Description: Anti-infantry unit.\nCan detect cloaked units and spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Valued:
 		Cost: 200
@@ -130,6 +130,74 @@ WOLF:
 	IgnoresDisguise:
     RenderSprites:
         Image: DOG
+	DetectCloaked:
+		CloakTypes: Cloak, Thief
+	Voiced:
+		VoiceSet: DogVoice
+	-TakeCover:
+    
+Rapt:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Dog
+		BuildPaletteOrder: 50
+		Prerequisites: ~kenn, ~techlevel.infonly, ~structures.ira
+		Description: Noms on people
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Raptor
+		GenericName: Dog
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Bounds: 12,17,-1,-4
+		DecorationBounds: 12,17,-1,-4
+	SelectionDecorations:
+	Health:
+		HP: 10000
+	Mobile:
+		Speed: 200
+		Voice: Move
+		RequiresCondition: !attack-cooldown && !eating
+	Guard:
+		Voice: Move
+	Passenger:
+		Voice: Move
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: RaptJaw
+		ReloadingCondition: attack-cooldown
+	AttackLeap:
+		Voice: Attack
+		PauseOnCondition: attacking || attack-cooldown
+	AttackMove:
+		Voice: Move
+	GrantConditionOnAttack:
+		Condition: eating
+		RevokeDelay: 45
+	GrantConditionWhileAiming:
+		Condition: run
+	AutoTarget:
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry
+	Targetable:
+		TargetTypes: Ground, Infantry
+	WithInfantryBody:
+		MoveSequence: run
+		StandSequences: stand
+		DefaultAttackSequence: eat
+		RequiresCondition: !run
+	WithInfantryBody@RUN:
+		MoveSequence: run
+		RequiresCondition: run
+	SpeedMultiplier:
+		Modifier: 150
+		RequiresCondition: run
+	IgnoresDisguise:
 	DetectCloaked:
 		CloakTypes: Cloak, Thief
 	Voiced:
@@ -373,7 +441,7 @@ BUTCH:
 		StandSequences: parachute
 		RequiresCondition: parachute
     RenderSprites:
-        Image: E3
+        Image: rmbo
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 BMBR:
@@ -627,6 +695,73 @@ E6:
 		MuzzleSequence: garrison-muzzle
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
+        
+STAN:
+	Inherits: ^Soldier
+    Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 60
+		Prerequisites: ~barracks, ~techlevel.infonly
+		Description: Employee 427's job was simple:\nhe sat at his desk in room 427\nand he pushed buttons on a keyboard.\nCloaked, build limit 1
+        BuildLimit: 1
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Stanley
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+    AttackFrontal:
+	WithInfantryBody:
+        DefaultAttackSequence: shoot
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	CaptureManager:
+	GrantConditionOnPrerequisite@GLOBALREUSABLEENGINEER:
+		Condition: global-reusable-engineers
+		Prerequisites: global-reusable-engineers
+	Captures:
+		RequiresCondition: !global-reusable-engineers
+		CaptureTypes: building
+		PlayerExperience: 25
+		CaptureDelay: 200
+	Captures@REUSABLE:
+		RequiresCondition: global-reusable-engineers
+		CaptureTypes: building
+		PlayerExperience: 25
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Voiced:
+		VoiceSet: EngineerVoice
+	Selectable:
+		Priority: 5
+    Armament@PRIMARY:
+		Weapon: Colt45
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Colt45
+		MuzzleSequence: garrison-muzzle
+    Cloak:
+		InitialDelay: 250
+		CloakDelay: 100
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+    RenderSprites:
+        Image: C10
 
 SPY:
 	Inherits: ^Soldier
@@ -706,7 +841,7 @@ E7:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 120
-		Prerequisites: ~tent, atek, ~techlevel.high
+		Prerequisites: ~tent, atek, ~techlevel.high, ~!infantry.ira
 		BuildLimit: 1
 		Description: Elite commando infantry. Armed with\ndual pistols and C4.\nCan detect cloaked units.\nMaximum 1 can be trained.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
 	Valued:

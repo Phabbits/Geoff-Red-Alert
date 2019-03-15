@@ -120,6 +120,17 @@ PSUBNapalm:
 		Versus:
 			None: 1000
 		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath
+        
+Zapper:
+	Inherits: ^TeslaWeapon
+	ReloadDelay: 0
+	Range: 6c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 1000
+		Versus:
+			None: 50
+            Wood: 73
+			Heavy: 60
 
 MK2Weapon:
 	ReloadDelay: 100
@@ -166,6 +177,23 @@ DogJaw:
 		ValidTargets: Infantry
 		InvalidTargets: Ant
 		DamageTypes: DefaultDeath
+        
+RaptJaw:
+	ReloadDelay: 30
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: 3000
+        ValidTargets: Infantry, Vehicles, Structures
+		Versus:
+			None: 97
+			Wood: 50
+			Light: 80
+			Heavy: 50
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 
 Heal:
 	ReloadDelay: 80
