@@ -76,7 +76,7 @@ BIGMSLO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter, ~techlevel.unrestricted, structures.allies, ~structures.ira
+		Prerequisites: techcenter, ~techlevel.unrestricted, structures.allies, ~!structures.ira
 		BuildLimit: 1
 		Description: Provides a Tsar Bomba.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Tsar Bomba
 	Building:
