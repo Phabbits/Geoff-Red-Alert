@@ -126,7 +126,7 @@ Zapper:
 	ReloadDelay: 0
 	Range: 6c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 1000
+		Damage: 4000
 		Versus:
 			None: 50
             Wood: 73
