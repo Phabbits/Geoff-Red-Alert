@@ -160,7 +160,7 @@ WATERBOMBER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 30000
 	RevealsShroud:
 		Range: 8c0
 		Type: GroundPosition
@@ -179,7 +179,7 @@ WATERBOMBER:
 		CruiseAltitude: 3000
 		InitialFacing: 192
 		TurnSpeed: 4
-		Speed: 110
+		Speed: 250
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	AutoTarget:
@@ -617,7 +617,7 @@ StealthBMBR:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 40
-		Prerequisites: ~hpad, atek, ~techlevel.high
+		Prerequisites: ~hpad, atek, ~techlevel.high, ~aircraft.ira
 		BuildDurationModifier: 50
 		Description: Stealth chopper with missles\nStrong vs Buildings, Vehicles, Aircraft\n  Weak vs Infantry
 	Valued:

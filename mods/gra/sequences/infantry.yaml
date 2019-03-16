@@ -1499,11 +1499,14 @@ rmbo:
 		Start: 308
 		Length: 4
 		Tick: 80
-	die-crushed: e1rot
-		Start: 16
-		Length: 4
+    die-crushed: corpse1
+		Length: 6
 		Tick: 1600
 		ZOffset: -511
+		UseTilesetExtension: true
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
     garrison-muzzle:
 		Length: 0
 		Facings: 8
