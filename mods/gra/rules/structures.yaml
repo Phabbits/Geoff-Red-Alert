@@ -76,7 +76,7 @@ BIGMSLO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter, ~techlevel.unrestricted, structures.allies, ~!structures.ira
+		Prerequisites: techcenter, ~techlevel.unrestricted, ~structures.allies, ~!structures.ira
 		BuildLimit: 1
 		Description: Provides a Tsar Bomba.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Tsar Bomba
 	Building:
@@ -792,7 +792,7 @@ WATCH:
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 60
 		Prerequisites: dome, ~structures.ira, ~techlevel.medium
 		Description: Anti-Air base defense.\nProvides a long range of vision\n  Strong vs Aircraft\n  Weak vs Ground units
         IconPalette: playerCNC
@@ -1108,7 +1108,7 @@ ARTGUN:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 70
-		Prerequisites: tent, ~structures.allies, ~techlevel.medium
+		Prerequisites: tent, ~structures.ira, ~techlevel.medium
 		Description: Go long.
         IconPalette: playerCNC
 	Valued:

@@ -19,7 +19,7 @@
 			Bridge: 200
 			Ore: 40
 			Gems: 40
-			Beach: 20
+			Beach: 50
 	Locomotor@WHEELED:
 		Name: wheeled
 		Crushes: mine, crate
@@ -39,7 +39,7 @@
 			Rough: 20
 			Road: 200
 			Bridge: 200
-			Ore: 5
+			Ore: 10
 			Gems: 5
 			Beach: 5
 	Locomotor@LIGHTTRACKED:

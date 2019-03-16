@@ -194,14 +194,14 @@ TWRGrenade:
 		Inaccuracy: 554
 		Image: BOMB
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 6000
+		Spread: 384
+		Damage: 23000
 		Versus:
-			None: 60
-			Wood: 100
-			Light: 25
+			None: 90
+			Wood: 40
+			Light: 60
 			Heavy: 25
-			Concrete: 100
+			Concrete: 70
 	Warhead@3Eff: CreateEffect
 		Explosions: med_explosion
 		ImpactSounds: kaboom25.aud

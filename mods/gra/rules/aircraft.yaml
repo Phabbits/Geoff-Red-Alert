@@ -621,7 +621,7 @@ StealthBMBR:
 		BuildDurationModifier: 50
 		Description: Stealth chopper with missles\nStrong vs Buildings, Vehicles, Aircraft\n  Weak vs Infantry
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: F-35 Stealth Fighter
 	UpdatesPlayerStatistics:
@@ -665,10 +665,10 @@ StealthBMBR:
 		CloakDelay: 300
 		CloakSound:
 		UncloakSound:
-		UncloakOn: Attack, Unload, Infiltrate, Demolish
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
 		IsPlayerPalette: true
 	AmmoPool:
-		Ammo: 8
+		Ammo: 6
 		AmmoCondition: ammo
 	SelectionDecorations:
 	SpawnActorOnDeath:

@@ -289,7 +289,7 @@ SNKCIV:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 10
 		Prerequisites: ~infantry.ira
 		Description: He is... very very sneaky.
 	Health:
@@ -449,6 +449,7 @@ BUTCH:
         Palette: playerCNC
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
+        
 BMBR:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -500,6 +501,7 @@ BMBR:
 		Prerequisites: barracks.upgraded
     RenderSprites:
         Image: E2
+        
 E1R1:
 	Inherits: E1
 	RenderSprites:
