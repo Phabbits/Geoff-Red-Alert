@@ -23,6 +23,10 @@
 		Name: player
 		Filename: temperat.pal
 		ShadowIndex: 4
+    PaletteFromFile@playerCNC
+        Name: playerCNC
+        Filename: temperatCNC.pal
+        ShadowIndex: 4
 	PaletteFromFile@chrome:
 		Name: chrome
 		Filename: temperat.pal

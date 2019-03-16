@@ -791,6 +791,7 @@ WATCH:
 		BuildPaletteOrder: 90
 		Prerequisites: dome, ~structures.ira, ~techlevel.medium
 		Description: Anti-Air base defense.\nProvides a long range of vision\n  Strong vs Aircraft\n  Weak vs Ground units
+        IconPalette: playerCNC
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -831,6 +832,9 @@ WATCH:
 		UseClassicFacingFudge: True
     RenderSprites:
         Image: GTWR
+        Palette: playerCNC
+    WithBuildingBib:
+        Palette: playerCNC
 
 DOME:
 	Inherits: ^Building
