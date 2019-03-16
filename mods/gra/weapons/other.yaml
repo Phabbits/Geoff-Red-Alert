@@ -185,7 +185,7 @@ RaptJaw:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: 3000
+		Damage: 6000
         ValidTargets: Infantry, Vehicles, Structures
 		Versus:
 			None: 97

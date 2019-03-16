@@ -2510,7 +2510,7 @@ BIGBRIK:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 30
-		Prerequisites: fact, ~techlevel.medium, structures.proles
+		Prerequisites: fact, ~techlevel.medium, ~structures.proles
 		Description: Keeps the bad guys out.
 	Valued:
 		Cost: 600

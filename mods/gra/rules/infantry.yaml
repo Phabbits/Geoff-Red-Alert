@@ -348,7 +348,7 @@ BERS:
 		FireDelay: 2
 	Armament@GARRISONED:
 		Name: garrisoned
-		Weapon: Vulcan
+		Weapon: FastFlamer
 		MuzzleSequence: garrison-muzzle
 	AttackFrontal:
 	WithInfantryBody:
@@ -386,7 +386,7 @@ TOW:
 		LocalOffset: 427,0,341
     Armament@SECONDARY:
 		Name: secondary
-		Weapon: Dragon
+		Weapon: PortaTesla
 		LocalOffset: 0,0,555
 	Armament@GARRISONED:
 		Name: garrisoned
@@ -431,7 +431,7 @@ BUTCH:
         Type: Medium
 	Armament@GARRISONED:
 		Name: garrisoned
-		Weapon: Vulcan
+		Weapon: 105mm
 		MuzzleSequence: garrison-muzzle
 	AttackFrontal:
 	WithInfantryBody:
@@ -748,7 +748,7 @@ STAN:
 		Weapon: Colt45
 	Armament@GARRISONED:
 		Name: garrisoned
-		Weapon: Colt45
+		Weapon: Vulcan
 		MuzzleSequence: garrison-muzzle
     Cloak:
 		InitialDelay: 250

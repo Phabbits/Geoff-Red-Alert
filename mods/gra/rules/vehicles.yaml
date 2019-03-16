@@ -593,7 +593,7 @@ HUMVEE:
 		Types: Infantry
 		MaxWeight: 4
 		PipCount: 4
-        InitialUnits: SNKCIV
+        InitialUnits: e1
 		LoadingCondition: notmobile
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
