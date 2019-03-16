@@ -906,7 +906,7 @@
 		Range: 1c0
     CaptureManager:
     ProximityCapturable:
-        Range: 3c0
+        Range: 1c0
         CaptorTypes: Infantry
         MustBeClear: True
         Sticky: True #Must be true to allow leavivng units in it
