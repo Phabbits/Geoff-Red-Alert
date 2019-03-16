@@ -900,13 +900,13 @@
     Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 2c0
+		Range: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 1c0
     CaptureManager:
     ProximityCapturable:
-        Range: 1c0
+        Range: 2c0
         CaptorTypes: Infantry
         MustBeClear: True
         Sticky: True #Must be true to allow leavivng units in it
