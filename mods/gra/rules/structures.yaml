@@ -696,6 +696,7 @@ ZAP:
 		BuildPaletteOrder: 80
 		Prerequisites: weap, ~structures.proles, ~techlevel.medium
 		Description: Makes their hair stand up.
+        IconPalette: playerCNC
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -733,6 +734,9 @@ ZAP:
 	ProvidesPrerequisite@buildingname:
     RenderSprites:
         Image: obli
+        Palette: playerCNC
+    WithBuildingBib:
+        Palette: playerCNC
 
 AGUN:
 	Inherits: ^Defense
@@ -1106,6 +1110,7 @@ ARTGUN:
 		BuildPaletteOrder: 70
 		Prerequisites: tent, ~structures.allies, ~techlevel.medium
 		Description: Go long.
+        IconPalette: playerCNC
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1142,7 +1147,9 @@ ARTGUN:
 		UseClassicFacingFudge: True
     RenderSprites:
         Image: atwr
-
+        Palette: playerCNC
+    WithBuildingBib:
+        Palette: playerCNC
 
 FTUR:
 	Inherits: ^Defense
@@ -2053,7 +2060,7 @@ APWR:
 NPWR:
 	Inherits: ^Building
 	Inherits@POWER_OUTAGE: ^DisabledByPowerOutage
-	Inherits@shape: ^3x2Shape
+	Inherits@shape: ^2x2Shape
 	HitShape:
 		TargetableOffsets: -355,-1024,0
 	Buildable:
@@ -2061,6 +2068,7 @@ NPWR:
 		BuildPaletteOrder: 110
 		Prerequisites: dome, ~techlevel.medium, ~structures.proles
 		Description: Provides double the power of\na standard Power Plant.
+        IconPalette: playerCNC
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -2068,8 +2076,8 @@ NPWR:
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Building:
-		Footprint: xxx Xxx ===
-		Dimensions: 3,3
+		Footprint: xx xx ==
+		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
 		Bounds: 72,48
@@ -2096,6 +2104,9 @@ NPWR:
 		DamageSource: Killer
     RenderSprites:
         Image: nuk2
+        Palette: playerCNC
+    WithBuildingBib:
+        Palette: playerCNC
 
 STEK:
 	Inherits: ^ScienceBuilding
@@ -2516,6 +2527,7 @@ BIGBRIK:
 		BuildPaletteOrder: 30
 		Prerequisites: fact, ~techlevel.medium, ~structures.proles
 		Description: Keeps the bad guys out.
+        IconPalette: playerCNC
 	Valued:
 		Cost: 600
 	CustomSellValue:
@@ -2536,6 +2548,9 @@ BIGBRIK:
 		Types: concrete
 	WithWallSpriteBody:
 		Type: concrete
+     RenderSprites:
+        Image: bigbrik
+        Palette: playerCNC
         
 CYCL:
 	Inherits: ^Wall

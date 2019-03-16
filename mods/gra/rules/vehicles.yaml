@@ -315,6 +315,7 @@ MM2K:
 		BuildDurationModifier: 50
         BuildLimit: 1
 		Description: Tiberian Sunnnnnnnn!
+        IconPalette: playerCNC
 	Valued:
 		Cost: 8000
 	Tooltip:
@@ -363,6 +364,7 @@ MM2K:
 		DecorationBounds: 44,38,0,-4
     RenderSprites:
         Image: htnk
+        Palette: playerCNC
         
 ARTY:
 	Inherits: ^TrackedVehicle
@@ -556,6 +558,7 @@ HUMVEE:
 		BuildPaletteOrder: 30
 		Prerequisites: ~vehicles.ira, ~techlevel.low
 		Description: Transport that can hold 4 men\nwho can shoot out the doors
+        IconPalette: playerCNC
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -599,6 +602,7 @@ HUMVEE:
 		Prerequisites: vehicles.upgraded
     RenderSprites:
         Image: humvee
+        Palette: playerCNC
     
 
 BUGGY:
@@ -610,6 +614,7 @@ BUGGY:
 		BuildPaletteOrder: 30
 		Prerequisites: ~vehicles.proles, ~techlevel.medium
 		Description: Fast scout & anti-air vehicle.\nShoots rockets 
+        IconPalette: playerCNC
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -655,6 +660,7 @@ BUGGY:
 		Prerequisites: vehicles.upgraded
     RenderSprites:
         Image: msam
+        Palette: playerCNC
         
 APC:
 	Inherits: ^TrackedVehicle
@@ -706,6 +712,7 @@ ARMOR:
 		BuildPaletteOrder: 40
 		Prerequisites: ~vehicles.proles, ~techlevel.low
 		Description: An unbreakable box.
+        IconPalette: playerCNC
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -738,6 +745,7 @@ ARMOR:
 		Prerequisites: vehicles.upgraded
     RenderSprites:
         Image: apcmcv
+        Palette: playerCNC
 
 MNLY:
 	Inherits: ^TrackedVehicle

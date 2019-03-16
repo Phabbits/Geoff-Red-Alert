@@ -203,6 +203,9 @@ Rapt:
 	Voiced:
 		VoiceSet: DogVoice
 	-TakeCover:
+    RenderSprites:
+        Image: rapt
+        Palette: playerCNC
     
 E1:
 	Inherits: ^Soldier
@@ -413,6 +416,7 @@ BUTCH:
 		BuildPaletteOrder: 10
 		Prerequisites: ~barracks, ~techlevel.infonly, ~infantry.proles
 		Description: Him smash.
+        IconPalette: playerCNC
 	Selectable:
 		Class: E1
 	Valued:
@@ -442,6 +446,7 @@ BUTCH:
 		RequiresCondition: parachute
     RenderSprites:
         Image: rmbo
+        Palette: playerCNC
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 BMBR:
@@ -765,6 +770,7 @@ STAN:
 		Prerequisites: barracks.upgraded
     RenderSprites:
         Image: C10
+        Palette: playerCNC
 
 SPY:
 	Inherits: ^Soldier
