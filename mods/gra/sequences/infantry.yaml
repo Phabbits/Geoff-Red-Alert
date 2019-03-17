@@ -1641,9 +1641,9 @@ rapt:
     die6:
 		Start: 144
 		Length: 40
-    die-crushed: e1rot
-		Start: 144
-		Length: 40
+    die-crushed: corpse1
+		Length: 6
 		Tick: 1600
 		ZOffset: -511
+		UseTilesetExtension: true
 	icon: dogicon

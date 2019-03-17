@@ -108,7 +108,7 @@ BIGMSLO:
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: AbombLaunchDetected
-		MissileWeapon: atomic
+		MissileWeapon: TsarAtomic
 		MissileDelay: 5
 		SpawnOffset: 1c0,427,0
 		DisplayTimerStances: Ally, Neutral, Enemy

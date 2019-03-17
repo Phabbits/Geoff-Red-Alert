@@ -65,7 +65,7 @@ WaterBomb:
 		ValidTargets: Water, Underwater
 		InvalidTargets: Structure
 
-Atomic:
+TsarAtomic:
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 1c0
