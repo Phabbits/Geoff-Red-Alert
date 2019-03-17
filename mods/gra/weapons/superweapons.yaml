@@ -182,7 +182,8 @@ TsarAtomic:
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees
 		Size: 5
 		Delay: 20
-        
+    RenderSprites:
+        Image: atomic
 Atomic:
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam_impact: SpreadDamage
