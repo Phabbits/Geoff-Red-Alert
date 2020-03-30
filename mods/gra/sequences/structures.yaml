@@ -765,3 +765,25 @@ atwr:
 	icon: atwricnh.tem
 		AddExtension: False
 		Offset: 0,0
+        
+bigmslo:
+	Defaults:
+		UseTilesetExtension: true
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
+	idle:
+	damaged-idle:
+		Start: 8
+	make: mslomake
+		Length: *
+	active:
+		Start: 1
+		Length: 7
+		Tick: 80
+	damaged-active:
+		Start: 9
+		Length: 7
+	icon: msloicon2
+		UseTilesetExtension: false
+	fake-icon: mslficon
+		UseTilesetExtension: false
